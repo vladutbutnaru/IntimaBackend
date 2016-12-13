@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - IntimaDB@baniimei.online">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="IntimaDB">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="Catalog"/>
+    <schema id="3" name="dentalprice"/>
+    <schema id="4" name="dentistulmeu"/>
+    <schema id="5" name="EmployeeDB"/>
+    <schema id="6" name="ERP_DB"/>
+    <schema id="7" name="information_schema"/>
+    <schema id="8" name="mail"/>
+    <schema id="9" name="mysql"/>
+    <schema id="10" name="OracleCertification"/>
+    <schema id="11" name="performance_schema"/>
+    <schema id="12" name="prestashop"/>
+    <schema id="13" name="springtest"/>
+    <schema id="14" name="sys"/>
+    <table id="15" parent="1" name="administrators"/>
+    <table id="16" parent="1" name="advertiser_banner"/>
+    <table id="17" parent="1" name="advertisers"/>
+    <table id="18" parent="1" name="article_translation"/>
+    <table id="19" parent="1" name="articles"/>
+    <table id="20" parent="1" name="cities"/>
+    <table id="21" parent="1" name="contact_messages"/>
+    <table id="22" parent="1" name="conversation_messages"/>
+    <table id="23" parent="1" name="conversations"/>
+    <table id="24" parent="1" name="countries"/>
+    <table id="25" parent="1" name="escort_categories"/>
+    <table id="26" parent="1" name="escort_description"/>
+    <table id="27" parent="1" name="escort_flags"/>
+    <table id="28" parent="1" name="escort_has_blocked_members"/>
+    <table id="29" parent="1" name="escort_has_flags"/>
+    <table id="30" parent="1" name="escort_has_votes"/>
+    <table id="31" parent="1" name="escort_of_the"/>
+    <table id="32" parent="1" name="escort_photo_votes"/>
+    <table id="33" parent="1" name="escort_photos"/>
+    <table id="34" parent="1" name="escort_review_comments"/>
+    <table id="35" parent="1" name="escort_reviews"/>
+    <table id="36" parent="1" name="escorts"/>
+    <table id="37" parent="1" name="fresh_flux"/>
+    <table id="38" parent="1" name="fresh_flux_comment_votes"/>
+    <table id="39" parent="1" name="fresh_flux_comments"/>
+    <table id="40" parent="1" name="fresh_flux_notifications"/>
+    <table id="41" parent="1" name="fresh_flux_votes"/>
+    <table id="42" parent="1" name="home_page_links"/>
+    <table id="43" parent="1" name="home_page_photos"/>
+    <table id="44" parent="1" name="languages"/>
+    <table id="45" parent="1" name="links"/>
+    <table id="46" parent="1" name="member_has_favorite_escort"/>
+    <table id="47" parent="1" name="members"/>
+    <table id="48" parent="1" name="notifications"/>
+    <table id="49" parent="1" name="people"/>
+    <table id="50" parent="1" name="person_has_preference"/>
+    <table id="51" parent="1" name="person_has_properties"/>
+    <table id="52" parent="1" name="person_preferences"/>
+    <table id="53" parent="1" name="person_properties"/>
+    <table id="54" parent="1" name="photo_of_the_day"/>
+    <table id="55" parent="1" name="search_tag_transations"/>
+    <table id="56" parent="1" name="search_tags"/>
+    <table id="57" parent="1" name="static_page_translations"/>
+    <table id="58" parent="1" name="translation_languages"/>
+    <table id="59" parent="1" name="translations"/>
+    <table id="60" parent="1" name="escort_prices"/>
+    <table id="61" parent="1" name="escort_schedule"/>
+    <column id="62" parent="15" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="63" parent="15" name="username">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="64" parent="15" name="name">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="65" parent="15" name="email">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="66" parent="15" name="password">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="67" parent="15" name="active">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="68" parent="15" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <key id="69" parent="15" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="70" parent="16" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="71" parent="16" name="email">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="72" parent="16" name="title">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="73" parent="16" name="description">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="74" parent="16" name="views">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="75" parent="16" name="in">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="76" parent="16" name="out">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="77" parent="16" name="position">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="78" parent="16" name="active">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="79" parent="16" name="country">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="80" parent="16" name="category">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="81" parent="16" name="pin">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="82" parent="16" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="83" parent="16" name="advertiser_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="84" parent="16" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="85" parent="17" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="86" parent="17" name="email">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="87" parent="17" name="password">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="88" parent="17" name="confirmed">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="89" parent="17" name="active">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="90" parent="17" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <key id="91" parent="17" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="92" parent="18" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="93" parent="18" name="language">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="94" parent="18" name="slug">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="95" parent="18" name="title">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="96" parent="18" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="97" parent="18" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="98" parent="18" name="article_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="99" parent="18" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="100" parent="19" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="101" parent="19" name="likes">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="102" parent="19" name="views">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="103" parent="19" name="active">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="104" parent="19" name="active_from">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="105" parent="19" name="anonymous">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="106" parent="19" name="image">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="107" parent="19" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <key id="108" parent="19" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="109" parent="20" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="110" parent="20" name="city">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="111" parent="20" name="country">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="112" parent="20" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="113" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="114" parent="21" name="subject">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="115" parent="21" name="sender_email">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="116" parent="21" name="issue_type">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="117" parent="21" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="118" parent="21" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <key id="119" parent="21" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="120" parent="22" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="121" parent="22" name="message">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="122" parent="22" name="read_by_sender">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="123" parent="22" name="read_by_receiver">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="124" parent="22" name="removed_by_sender">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="125" parent="22" name="removed_by_receiver">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="126" parent="22" name="deleted_by_sender">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="127" parent="22" name="deleted_by_receiver">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="128" parent="22" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="129" parent="22" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="130" parent="22" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="131" parent="22" name="conversation_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="132" parent="22" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="133" parent="23" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="134" parent="23" name="subject">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="135" parent="23" name="star">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="136" parent="23" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="137" parent="23" name="deleted_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="138" parent="23" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="139" parent="23" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="140" parent="23" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="141" parent="24" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="142" parent="24" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="143" parent="24" name="name">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="144" parent="24" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="145" parent="25" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="146" parent="25" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="147" parent="25" name="gender">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="148" parent="25" name="order">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="149" parent="25" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="150" parent="26" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="151" parent="26" name="language">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="152" parent="26" name="description">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="153" parent="26" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="154" parent="26" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="155" parent="26" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="156" parent="27" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="157" parent="27" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="158" parent="27" name="filter">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="159" parent="27" name="watermark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="160" parent="27" name="is_quick_filter">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="161" parent="27" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="162" parent="28" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="163" parent="28" name="reason">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="164" parent="28" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="165" parent="28" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="166" parent="28" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="167" parent="28" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="168" parent="29" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="169" parent="29" name="escort_flag_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="170" parent="29" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="171" parent="29" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="172" parent="30" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="173" parent="30" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="174" parent="30" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="175" parent="30" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="176" parent="31" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="177" parent="31" name="date_start">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="178" parent="31" name="date_end">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="179" parent="31" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="180" parent="31" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="181" parent="31" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="182" parent="32" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="183" parent="32" name="escort_photo_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="184" parent="32" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="185" parent="32" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="186" parent="33" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="187" parent="33" name="filename">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="188" parent="33" name="date">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="189" parent="33" name="status">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="190" parent="33" name="profile_photo">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="191" parent="33" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="192" parent="33" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="193" parent="33" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="194" parent="34" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="195" parent="34" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="196" parent="34" name="active">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="197" parent="34" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="198" parent="34" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="199" parent="34" name="escort_review_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="200" parent="34" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="201" parent="35" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="202" parent="35" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="203" parent="35" name="active">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="204" parent="35" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="205" parent="35" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="206" parent="35" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="207" parent="35" name="meeting_date">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="208" parent="35" name="duration">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="209" parent="35" name="city">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="210" parent="35" name="look">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="211" parent="35" name="hygiene">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="212" parent="35" name="services">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="213" parent="35" name="communication">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="214" parent="35" name="photo">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="215" parent="35" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="216" parent="36" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="217" parent="36" name="bdsm">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="218" parent="36" name="email">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="219" parent="36" name="activation_code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="220" parent="36" name="stage_name">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="221" parent="36" name="status">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="222" parent="36" name="language">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="223" parent="36" name="languages">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="224" parent="36" name="address">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="225" parent="36" name="schedule">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="226" parent="36" name="password">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="227" parent="36" name="phone_number">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="228" parent="36" name="slug">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="229" parent="36" name="website">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="230" parent="36" name="area">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="231" parent="36" name="city">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="232" parent="36" name="gift">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="233" parent="36" name="suspended_time_stop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="234" parent="36" name="recommended">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="235" parent="36" name="always_approve_photos">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="236" parent="36" name="notif_admin">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="237" parent="36" name="notif_inbox">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="238" parent="36" name="newsletter">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="239" parent="36" name="contact_by_email">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="240" parent="36" name="block_comments">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="241" parent="36" name="accept_terms">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="242" parent="36" name="last_login_ip">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="243" parent="36" name="birth_date">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="244" parent="36" name="last_login_date">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="245" parent="36" name="subscription_start">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="246" parent="36" name="subscription_end">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="247" parent="36" name="suspension_start">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="248" parent="36" name="suspension_end">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="249" parent="36" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="250" parent="36" name="updated_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="251" parent="36" name="deleted_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="252" parent="36" name="category_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="253" parent="36" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="254" parent="37" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="255" parent="37" name="image">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="256" parent="37" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="257" parent="37" name="status">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="258" parent="37" name="votes">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="259" parent="37" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="260" parent="37" name="updated_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="261" parent="37" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="262" parent="37" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="263" parent="37" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="264" parent="38" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="265" parent="38" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="266" parent="38" name="fresh_flux_comment_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="267" parent="38" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="268" parent="38" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="269" parent="39" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="270" parent="39" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="271" parent="39" name="image">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="272" parent="39" name="status">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="273" parent="39" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="274" parent="39" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="275" parent="39" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="276" parent="39" name="fresh_flux_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="277" parent="39" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="278" parent="40" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="279" parent="40" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="280" parent="40" name="updated_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="281" parent="40" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="282" parent="40" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="283" parent="40" name="fresh_flux_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="284" parent="40" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="285" parent="41" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="286" parent="41" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="287" parent="41" name="fresh_flux_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="288" parent="41" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="289" parent="41" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="290" parent="42" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="291" parent="42" name="title">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="292" parent="42" name="url">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="293" parent="42" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <key id="294" parent="42" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="295" parent="43" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="296" parent="43" name="file">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="297" parent="43" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="298" parent="44" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="299" parent="44" name="name">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="300" parent="44" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="301" parent="45" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="302" parent="45" name="title">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="303" parent="45" name="type">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="304" parent="45" name="width">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="305" parent="45" name="height">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="306" parent="45" name="file">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="307" parent="45" name="file_url">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="308" parent="45" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="309" parent="45" name="published">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="310" parent="45" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="311" parent="46" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="312" parent="46" name="notes">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="313" parent="46" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="314" parent="46" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="315" parent="46" name="member_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="316" parent="46" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="317" parent="47" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="318" parent="47" name="email">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="319" parent="47" name="activation_code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="320" parent="47" name="password">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="321" parent="47" name="birth_date">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="322" parent="47" name="accept_terms">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="323" parent="47" name="status">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="324" parent="47" name="language">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="325" parent="47" name="username">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="326" parent="47" name="notif_admin">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="327" parent="47" name="notif_inbox">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="328" parent="47" name="newsletter">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="329" parent="47" name="visible_photo">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="330" parent="47" name="photo">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="331" parent="47" name="city">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="332" parent="47" name="country">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="333" parent="47" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="334" parent="47" name="deleted_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <key id="335" parent="47" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="336" parent="48" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="337" parent="48" name="title">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="338" parent="48" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="339" parent="48" name="active_start">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="340" parent="48" name="active_end">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="341" parent="48" name="hide">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="342" parent="48" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="343" parent="48" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="344" parent="48" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="345" parent="49" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="346" parent="49" name="orientation">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="347" parent="49" name="role">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="348" parent="49" name="gender">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="349" parent="49" name="created_at">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="350" parent="49" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="351" parent="49" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="352" parent="50" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="353" parent="50" name="value">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="354" parent="50" name="person_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="355" parent="50" name="person_preference_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="356" parent="50" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="357" parent="51" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="358" parent="51" name="field_value">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="359" parent="51" name="person_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="360" parent="51" name="person_property_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="361" parent="51" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="362" parent="52" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="363" parent="52" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="364" parent="52" name="group">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="365" parent="52" name="bdsm">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="366" parent="52" name="orientation">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="367" parent="52" name="is_quick_filter">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="368" parent="52" name="escort_category_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="369" parent="52" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="370" parent="53" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="371" parent="53" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="372" parent="53" name="category">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="373" parent="53" name="multiple_select">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="374" parent="53" name="selectable_values">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="375" parent="53" name="is_quick_filter">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="376" parent="53" name="escort_category_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="377" parent="53" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="378" parent="54" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="379" parent="54" name="date">
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="380" parent="54" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="381" parent="54" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="382" parent="55" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="383" parent="55" name="language">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="384" parent="55" name="title">
+      <data-type>tinytext|0</data-type>
+    </column>
+    <column id="385" parent="55" name="search_tag_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="386" parent="55" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="387" parent="56" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="388" parent="56" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="389" parent="56" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="390" parent="57" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="391" parent="57" name="language">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="392" parent="57" name="url">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="393" parent="57" name="title">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="394" parent="57" name="content">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="395" parent="57" name="static_page_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="396" parent="57" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="397" parent="58" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="398" parent="58" name="language">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="399" parent="58" name="translation">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="400" parent="58" name="neutral">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="401" parent="58" name="male">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="402" parent="58" name="female">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="403" parent="58" name="translation_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="404" parent="58" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="405" parent="59" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="406" parent="59" name="code">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="407" parent="59" name="type">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="408" parent="59" name="field">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="409" parent="59" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="410" parent="60" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="411" parent="60" name="location">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="412" parent="60" name="duration">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="413" parent="60" name="price">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="414" parent="60" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="415" parent="60" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="416" parent="61" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="417" parent="61" name="escort_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="418" parent="61" name="monday">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="419" parent="61" name="tuesday">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="420" parent="61" name="wednesday">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="421" parent="61" name="thursday">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="422" parent="61" name="friday">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="423" parent="61" name="saturday">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="424" parent="61" name="sunday">
+      <data-type>text|0</data-type>
+    </column>
+    <key id="425" parent="61" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
