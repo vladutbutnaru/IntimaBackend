@@ -24,7 +24,7 @@ public class PersonPreferenceController extends AbstractController {
 
             stmt.setInt(1,id);
             rs = stmt.executeQuery();
-            logger.info("getPreferencesForEscort: " + id);
+
             while (rs.next()) {
                PersonPreference pf = getById(rs.getInt(4));
                 pf.setValue(rs.getString(2));
@@ -56,7 +56,7 @@ public class PersonPreferenceController extends AbstractController {
 
 
             rs = stmt.executeQuery();
-            logger.info("getAllPreferences: ");
+
             while (rs.next()) {
                 PersonPreference pf = getById(rs.getInt(1));
                 pf.setValue(rs.getString(2));
@@ -94,7 +94,7 @@ public class PersonPreferenceController extends AbstractController {
 
             stmt.setInt(1,id);
             rs = stmt.executeQuery();
-            logger.info("getPreferencesForEscort: " + id);
+
             if (rs.next()) {
                 pf.setCode(rs.getString(2));
             }

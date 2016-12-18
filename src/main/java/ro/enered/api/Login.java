@@ -2,9 +2,7 @@ package ro.enered.api;
 
 import com.google.gson.Gson;
 import ro.enered.controllers.*;
-import ro.enered.entities.Escort;
-import ro.enered.entities.Member;
-import ro.enered.entities.PersonProperty;
+import ro.enered.entities.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -46,6 +44,7 @@ public class Login extends HttpServlet {
         if(path.equals(REGISTER)){
            String type = request.getParameter("type"); //1 member, 2 escort, 3 agency, 4 advertiser
             if(type.equals("1")) {
+
                String country = request.getParameter("country");
                 String city = request.getParameter("city");
                 String day = request.getParameter("day");
@@ -89,7 +88,41 @@ public class Login extends HttpServlet {
                 EscortController.registerEscort(m);
 
             }
+            if(type.equals("3")) {
 
+                String city = request.getParameter("city");
+
+                String email = request.getParameter("email");
+                String user = request.getParameter("user");
+
+                String password=request.getParameter("password");
+                MassageAgency m = new MassageAgency();
+                m.setUser(user);
+                m.setPassword(password);
+                m.setEmail(email);
+
+                m.setCity(CityController.getById(Integer.parseInt(city)));
+
+                MassageAgencyController.registerAgency(m);
+
+            }
+            if(type.equals("4")) {
+
+
+                String email = request.getParameter("email");
+
+
+                String password=request.getParameter("password");
+                Advertiser m = new Advertiser();
+
+                m.setPassword(password);
+                m.setEmail(email);
+
+
+
+                AdvertiserController.registerAdvertiser(m);
+
+            }
         }
     }
 

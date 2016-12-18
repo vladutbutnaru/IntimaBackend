@@ -25,7 +25,7 @@ public class EscortScheduleController extends AbstractController {
             stmt.setInt(1, e.getId());
 
             rs = stmt.executeQuery();
-            logger.info("getScheduleForEscort: " + e.getId());
+
             while (rs.next()) {
               EscortSchedule es = new EscortSchedule();
                 es.setMonday(rs.getString(3));

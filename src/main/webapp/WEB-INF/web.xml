@@ -64,6 +64,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
         <url-pattern>/escorts/other</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
@@ -74,6 +78,42 @@
         <servlet-name>Escorts</servlet-name>
         <url-pattern>/escorts/info</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/men</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/female</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/female/withfilters</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/lesbian</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/gays</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/ts</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/tv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/couples</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>CorsFilter</filter-name>
         <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>

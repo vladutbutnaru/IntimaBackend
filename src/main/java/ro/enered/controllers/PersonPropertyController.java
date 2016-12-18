@@ -22,7 +22,7 @@ public class PersonPropertyController  extends AbstractController {
 
             stmt.setInt(1,id);
             rs = stmt.executeQuery();
-            logger.info("getPropertiesForEscort: " + id);
+
             while (rs.next()) {
                 PersonProperty pr;
                 pr = getById(rs.getInt(2));
@@ -43,7 +43,7 @@ public class PersonPropertyController  extends AbstractController {
         return properties;
 
     }
-public static ArrayList<PersonProperty> getByCategory(int category){
+public static ArrayList<PersonProperty> getByCategory(int category, int escortCategory){
     ArrayList<PersonProperty> properties = new ArrayList<PersonProperty>();
     PreparedStatement stmt;
     ResultSet rs;
@@ -53,12 +53,12 @@ public static ArrayList<PersonProperty> getByCategory(int category){
         stmt = conn.prepareStatement("SELECT * FROM person_properties");
 
         rs = stmt.executeQuery();
-        logger.info("getByCategory: " + category);
+
         while (rs.next()) {
             PersonProperty pr;
             pr = getById(rs.getInt(1));
             if(pr.getCategory() == category) {
-
+                pr.setNumOfEscorts(getNumberOfEscortsWithProperty(escortCategory, rs.getInt(1)));
                 properties.add(pr);
             }
         }
@@ -78,6 +78,71 @@ public static ArrayList<PersonProperty> getByCategory(int category){
 
 
 }
+public static int getNumberOfEscortsWithProperty(int escortCategory, int propertyID){
+    //1 for girls, 2 for lesbians, 3 men, 4 gays, 5 ts, 6 tv, 7 couples, 8 bdsm
+    int numOfEscorts =0;
+    PreparedStatement stmt;
+    ResultSet rs;
+    PersonProperty pp = new PersonProperty();
+
+    try{
+        ArrayList<Escort> escorts = new ArrayList<Escort>();
+      switch(escortCategory){
+          case 1:
+              escorts=EscortController.getFemaleEscorts(1000);
+              break;
+          case 2:
+              escorts =EscortController.getLesbianEscorts(1000);
+              break;
+          case 3:
+              escorts = EscortController.getMenEscorts(1000);
+              break;
+          case 4:
+              escorts = EscortController.getGayEscorts(1000);
+              break;
+          case 5:
+              escorts=EscortController.getTSEscorts(1000);
+              break;
+          case 6:
+              escorts=EscortController.getTVEscorts(1000);
+              break;
+          case 7:
+              escorts = EscortController.getCoupleEscorts(1000);
+              break;
+
+
+
+      }
+        for(Escort e : escorts) {
+            stmt = conn.prepareStatement("SELECT id FROM person_has_properties WHERE  person_id = ? AND person_property_id = ?");
+
+            stmt.setInt(1, e.getId());
+            stmt.setInt(2, propertyID);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                numOfEscorts++;
+
+            }
+        }
+
+    }
+    catch (SQLException ex) {
+        // handle any errors
+        System.out.println("SQLException: " + ex.getMessage());
+        System.out.println("SQLState: " + ex.getSQLState());
+        System.out.println("VendorError: " + ex.getErrorCode());
+        logger.error(ex.getMessage());
+
+    }
+
+    return numOfEscorts;
+
+
+
+
+}
+
     public static PersonProperty getById(int id){
         PreparedStatement stmt;
         ResultSet rs;
@@ -87,10 +152,41 @@ public static ArrayList<PersonProperty> getByCategory(int category){
 
             stmt.setInt(1,id);
             rs = stmt.executeQuery();
-            logger.info("getById: " + id);
+
             if (rs.next()) {
                 pp.setCategory(rs.getInt(3));
                pp.setCode(rs.getString(2));
+
+            }
+
+
+        }
+        catch (SQLException ex) {
+            // handle any errors
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            logger.error(ex.getMessage());
+
+        }
+        return pp;
+
+
+    }
+
+    public static PersonProperty getByCode(String code){
+        PreparedStatement stmt;
+        ResultSet rs;
+        PersonProperty pp = new PersonProperty();
+        try{
+            stmt = conn.prepareStatement("SELECT * FROM person_properties WHERE code = ?");
+
+            stmt.setString(1,code);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                pp.setCategory(rs.getInt(3));
+                pp.setCode(rs.getString(2));
 
             }
 

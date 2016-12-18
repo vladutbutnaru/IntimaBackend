@@ -25,7 +25,7 @@ public class EscortReviewController extends AbstractController {
             stmt.setInt(1, id);
 
             rs = stmt.executeQuery();
-            logger.info("getEscortReviews: " +id);
+
             while (rs.next()) {
                EscortReview er = new EscortReview();
               er.setContent(rs.getString(2));

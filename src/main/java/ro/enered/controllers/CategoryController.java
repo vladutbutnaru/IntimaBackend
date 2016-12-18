@@ -20,7 +20,6 @@ public class CategoryController extends AbstractController {
             stmt.setInt(1, id);
 
             rs = stmt.executeQuery();
-            logger.info("getCategories: " + id);
             if (rs.next()) {
                 c.setId(rs.getInt(1));
                 c.setCode(rs.getString(2));

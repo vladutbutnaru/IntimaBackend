@@ -25,7 +25,7 @@ public class EscortPriceController  extends AbstractController{
             stmt.setInt(1, e.getId());
 
             rs = stmt.executeQuery();
-            logger.info("getPricesForEscort: " + e.getId());
+
             while (rs.next()) {
                 EscortPrice ep = new EscortPrice();
                 ep.setDuration(rs.getString(3));

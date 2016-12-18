@@ -35,7 +35,8 @@ processRequest(request,response);
         if (path.equals(GENERAL)) {
 
         ArrayList<PersonProperty> properties;
-            properties = PersonPropertyController.getByCategory((1));
+            int escortCategory = Integer.parseInt(request.getParameter("category"));
+            properties = PersonPropertyController.getByCategory(1,escortCategory);
 
             String json = new Gson().toJson(properties);
             response.setContentType("application/json");
@@ -44,9 +45,9 @@ processRequest(request,response);
 
         }
         if (path.equals(SEXUAL)) {
-
+            int escortCategory = Integer.parseInt(request.getParameter("category"));
             ArrayList<PersonProperty> properties;
-            properties = PersonPropertyController.getByCategory((2));
+            properties = PersonPropertyController.getByCategory(2,escortCategory);
 
             String json = new Gson().toJson(properties);
             response.setContentType("application/json");
@@ -55,9 +56,9 @@ processRequest(request,response);
 
         }
         if (path.equals(PHYSICAL)) {
-
+            int escortCategory = Integer.parseInt(request.getParameter("category"));
             ArrayList<PersonProperty> properties;
-            properties = PersonPropertyController.getByCategory((3));
+            properties = PersonPropertyController.getByCategory(3,escortCategory);
 
             String json = new Gson().toJson(properties);
             response.setContentType("application/json");
@@ -66,9 +67,9 @@ processRequest(request,response);
 
         }
         if (path.equals(BDSM)) {
-
+            int escortCategory = Integer.parseInt(request.getParameter("category"));
             ArrayList<PersonProperty> properties;
-            properties = PersonPropertyController.getByCategory((4));
+            properties = PersonPropertyController.getByCategory(4,escortCategory);
 
             String json = new Gson().toJson(properties);
             response.setContentType("application/json");
@@ -77,9 +78,9 @@ processRequest(request,response);
 
         }
         if (path.equals(SOCIAL)) {
-
+            int escortCategory = Integer.parseInt(request.getParameter("category"));
             ArrayList<PersonProperty> properties;
-            properties = PersonPropertyController.getByCategory((5));
+            properties = PersonPropertyController.getByCategory(5,escortCategory);
 
             String json = new Gson().toJson(properties);
             response.setContentType("application/json");

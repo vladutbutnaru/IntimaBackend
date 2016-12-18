@@ -21,7 +21,7 @@ public class CityController extends AbstractController {
             stmt.setInt(1, id);
 
             rs = stmt.executeQuery();
-            logger.info("getCity: " + id);
+
             if (rs.next()) {
                 c.setId(rs.getInt(1));
                 c.setCity(rs.getString(2));
@@ -37,6 +37,39 @@ public class CityController extends AbstractController {
 
         }
         return c;
+
+    }
+    public static City getByName(String name){
+        PreparedStatement stmt;
+        ResultSet rs;
+
+        City c = new City();
+        try {
+
+            stmt = conn.prepareStatement("SELECT * FROM cities WHERE UPPER(city) LIKE UPPER (?)");
+            stmt.setString(1, name);
+
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                c.setId(rs.getInt(1));
+
+                c.setCountry(CountryController.getById(rs.getInt(3)));
+
+            }
+        } catch (SQLException ex) {
+            // handle any errors
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            logger.error(ex.getMessage());
+
+        }
+        return c;
+
+
+
+
 
     }
 

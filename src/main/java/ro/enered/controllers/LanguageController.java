@@ -22,7 +22,7 @@ public class LanguageController extends AbstractController {
             stmt.setInt(1, id);
 
             rs = stmt.executeQuery();
-            logger.info("getLanguage: " + id);
+
             if (rs.next()) {
                 c.setId(rs.getInt(1));
 

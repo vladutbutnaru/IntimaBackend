@@ -12,6 +12,15 @@ public class PersonProperty {
     private boolean quickFilter;
     private Category escortCategory;
     private String value;
+    private int numOfEscorts;
+
+    public int getNumOfEscorts() {
+        return numOfEscorts;
+    }
+
+    public void setNumOfEscorts(int numOfEscorts) {
+        this.numOfEscorts = numOfEscorts;
+    }
 
     public String getValue() {
         return value;

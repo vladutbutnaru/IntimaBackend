@@ -24,7 +24,7 @@ public class EscortPhotoController extends AbstractController {
             stmt.setInt(1, id);
 
             rs = stmt.executeQuery();
-            logger.info("getEscortPhoto: " + id);
+
             if (rs.next()) {
                 c.setId(rs.getInt(1));
                 c.setPhoto(rs.getString(2));
@@ -59,7 +59,7 @@ public class EscortPhotoController extends AbstractController {
             stmt.setInt(1, e.getId());
 
             rs = stmt.executeQuery();
-            logger.info("getEscortPhoto: " + e.getId());
+
             if (rs.next()) {
                 c.setId(rs.getInt(1));
                 c.setPhoto(rs.getString(2));
@@ -96,7 +96,7 @@ public class EscortPhotoController extends AbstractController {
             stmt.setInt(1, e.getId());
 
             rs = stmt.executeQuery();
-            logger.info("getEscortPhoto: " + e.getId());
+
             while (rs.next()) {
                 EscortPhoto c = new EscortPhoto();
                 c.setId(rs.getInt(1));
