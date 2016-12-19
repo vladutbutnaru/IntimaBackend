@@ -156,6 +156,7 @@ public static int getNumberOfEscortsWithProperty(int escortCategory, int propert
             if (rs.next()) {
                 pp.setCategory(rs.getInt(3));
                pp.setCode(rs.getString(2));
+                pp.setSelectableValues(rs.getString(5));
 
             }
 
