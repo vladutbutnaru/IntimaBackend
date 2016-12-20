@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ae5827-8bc7-4baf-84ac-5274573089cb" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ro/enered/controllers/PersonPropertyController.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SitesBackend.iws" />
@@ -43,15 +44,9 @@
           <file leaf-file-name="PersonPropertiesMappingController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertiesMappingController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
+                <state relative-caret-position="330">
                   <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1334#1359#0" expanded="true" />
-                    <marker date="1482160672002" expanded="true" signature="545:635" ph="INSERT INTO person_has_properties... " />
-                    <marker date="1482160672002" expanded="true" signature="982:1039" ph="UPDATE perso... " />
-                    <marker date="1482160672002" expanded="true" signature="1469:1515" ph="SELECT * FRO... person_has_properties" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -63,37 +58,14 @@
                   <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#2877#2898#0" expanded="true" />
-                    <marker date="1482149518383" expanded="true" signature="625:733" ph="INSERT INTO conversation_messages... " />
-                    <marker date="1482149518383" expanded="true" signature="1194:1243" ph="UPDATE conve... " />
-                    <marker date="1482149518383" expanded="true" signature="1463:1514" ph="UPDATE conve... " />
-                    <marker date="1482149518383" expanded="true" signature="1734:1786" ph="UPDATE conve... " />
-                    <marker date="1482149518383" expanded="true" signature="2006:2060" ph="UPDATE conve... " />
-                    <marker date="1482149518383" expanded="true" signature="2280:2332" ph="UPDATE conve... " />
-                    <marker date="1482149518383" expanded="true" signature="2552:2606" ph="UPDATE conve... " />
-                    <marker date="1482149518383" expanded="true" signature="3008:3067" ph="SELECT * FRO... conversation_messages" />
-                    <marker date="1482149518383" expanded="true" signature="3008:3092" ph="SELECT * FRO... conversation_messages" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ConversationController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/ConversationController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2089#2103#0" expanded="true" />
-                    <element signature="e#3172#3186#0" expanded="true" />
-                    <marker date="1482146461117" expanded="true" signature="535:636" ph="INSERT INTO conversations... " />
-                    <marker date="1482146461117" expanded="true" signature="1119:1167" ph="UPDATE conve... " />
-                    <marker date="1482146461117" expanded="true" signature="1440:1482" ph="UPDATE conve... " />
-                    <marker date="1482146461117" expanded="true" signature="1743:1785" ph="UPDATE conve... " />
-                    <marker date="1482146461117" expanded="true" signature="2160:2205" ph="SELECT * FRO... conversations" />
-                    <marker date="1482146461117" expanded="true" signature="3243:3288" ph="SELECT * FRO... conversations" />
-                    <marker date="1482146461117" expanded="true" signature="4284:4322" ph="SELECT * FRO... conversations" />
+                    <marker date="1482225388000" expanded="true" signature="625:733" ph="INSERT INTO conversation_messages... " />
+                    <marker date="1482225388000" expanded="true" signature="1194:1243" ph="UPDATE conve... " />
+                    <marker date="1482225388000" expanded="true" signature="1463:1514" ph="UPDATE conve... " />
+                    <marker date="1482225388000" expanded="true" signature="1734:1786" ph="UPDATE conve... " />
+                    <marker date="1482225388000" expanded="true" signature="2006:2060" ph="UPDATE conve... " />
+                    <marker date="1482225388000" expanded="true" signature="2280:2332" ph="UPDATE conve... " />
+                    <marker date="1482225388000" expanded="true" signature="2552:2606" ph="UPDATE conve... " />
+                    <marker date="1482225388000" expanded="true" signature="3008:3092" ph="SELECT * FRO... conversation_messages" />
                   </folding>
                 </state>
               </provider>
@@ -102,9 +74,34 @@
           <file leaf-file-name="ContactMessage.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/ContactMessage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
+                <state relative-caret-position="105">
                   <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                  <folding />
+                  <folding>
+                    <element signature="e#327#328#0" expanded="false" />
+                    <element signature="e#352#353#0" expanded="false" />
+                    <element signature="e#385#386#0" expanded="false" />
+                    <element signature="e#413#414#0" expanded="false" />
+                    <element signature="e#447#448#0" expanded="false" />
+                    <element signature="e#477#478#0" expanded="false" />
+                    <element signature="e#523#524#0" expanded="false" />
+                    <element signature="e#561#562#0" expanded="false" />
+                    <element signature="e#599#600#0" expanded="false" />
+                    <element signature="e#633#634#0" expanded="false" />
+                    <element signature="e#687#688#0" expanded="false" />
+                    <element signature="e#733#734#0" expanded="false" />
+                    <element signature="e#769#770#0" expanded="false" />
+                    <element signature="e#801#802#0" expanded="false" />
+                    <element signature="e#851#852#0" expanded="false" />
+                    <element signature="e#893#894#0" expanded="false" />
+                    <element signature="e#927#928#0" expanded="false" />
+                    <element signature="e#957#958#0" expanded="false" />
+                    <element signature="e#1003#1004#0" expanded="false" />
+                    <element signature="e#1041#1042#0" expanded="false" />
+                    <element signature="e#1080#1081#0" expanded="false" />
+                    <element signature="e#1112#1113#0" expanded="false" />
+                    <element signature="e#1165#1166#0" expanded="false" />
+                    <element signature="e#1207#1208#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -112,7 +109,7 @@
           <file leaf-file-name="ContactMesageController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/ContactMesageController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
+                <state relative-caret-position="90">
                   <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
                   <folding />
                 </state>
@@ -122,15 +119,9 @@
           <file leaf-file-name="PeopleController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PeopleController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="663">
+                <state relative-caret-position="495">
                   <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <marker date="1482160416690" expanded="true" signature="471:554" ph="insert into people... " />
-                    <marker date="1482160416690" expanded="true" signature="958:1041" ph="UPDATE peopl... " />
-                    <marker date="1482160416690" expanded="true" signature="1431:1460" ph="DELETE FROM " />
-                    <marker date="1482160416690" expanded="true" signature="1754:1785" ph="SELECT * FRO... people" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -138,9 +129,11 @@
           <file leaf-file-name="Escorts.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
+                <state relative-caret-position="3000">
                   <caret line="215" column="27" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="27" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -148,18 +141,15 @@
           <file leaf-file-name="PersonPropertyController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertyController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="150" column="89" selection-start-line="150" selection-start-column="89" selection-end-line="150" selection-end-column="89" />
+                <state relative-caret-position="364">
+                  <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
                   <folding>
-                    <element signature="method#getByCategory#0;class#PersonPropertyController#0" expanded="false" />
-                    <element signature="method#getNumberOfEscortsWithProperty#0;class#PersonPropertyController#0" expanded="false" />
-                    <element signature="e#2546#2554#0" expanded="true" />
                     <element signature="method#getByCode#0;class#PersonPropertyController#0" expanded="false" />
-                    <marker date="1482162634566" expanded="true" signature="540:624" ph="SELECT field... person_has_properties" />
-                    <marker date="1482162634566" expanded="true" signature="1501:1532" ph="SELECT * FRO... person_properties" />
-                    <marker date="1482162634566" expanded="true" signature="3383:3467" ph="SELECT id FR... person_has_properties" />
-                    <marker date="1482162634566" expanded="true" signature="4223:4267" ph="SELECT * FRO... person_properties" />
-                    <marker date="1482162634566" expanded="true" signature="5112:5158" ph="SELECT * FRO... person_properties" />
+                    <marker date="1482225614000" expanded="true" signature="540:624" ph="SELECT field... person_has_properties" />
+                    <marker date="1482225614000" expanded="true" signature="1501:1532" ph="SELECT * FRO... person_properties" />
+                    <marker date="1482225614000" expanded="true" signature="3383:3467" ph="SELECT id FR... person_has_properties" />
+                    <marker date="1482225614000" expanded="true" signature="4223:4267" ph="SELECT * FRO... person_properties" />
+                    <marker date="1482225614000" expanded="true" signature="5112:5158" ph="SELECT * FRO... person_properties" />
                   </folding>
                 </state>
               </provider>
@@ -168,11 +158,43 @@
           <file leaf-file-name="PersonProperty.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/PersonProperty.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
+                <state relative-caret-position="150">
                   <caret line="10" column="36" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="36" />
                   <folding>
-                    <element signature="e#954#955#0" expanded="true" />
-                    <element signature="e#985#986#0" expanded="true" />
+                    <element signature="e#408#409#0" expanded="false" />
+                    <element signature="e#443#444#0" expanded="false" />
+                    <element signature="e#496#497#0" expanded="false" />
+                    <element signature="e#544#545#0" expanded="false" />
+                    <element signature="e#576#577#0" expanded="false" />
+                    <element signature="e#604#605#0" expanded="false" />
+                    <element signature="e#646#647#0" expanded="false" />
+                    <element signature="e#680#681#0" expanded="false" />
+                    <element signature="e#706#707#0" expanded="false" />
+                    <element signature="e#731#732#0" expanded="false" />
+                    <element signature="e#764#765#0" expanded="false" />
+                    <element signature="e#792#793#0" expanded="false" />
+                    <element signature="e#823#824#0" expanded="false" />
+                    <element signature="e#850#851#0" expanded="false" />
+                    <element signature="e#890#891#0" expanded="false" />
+                    <element signature="e#922#923#0" expanded="false" />
+                    <element signature="e#1030#1031#0" expanded="false" />
+                    <element signature="e#1070#1071#0" expanded="false" />
+                    <element signature="e#1111#1112#0" expanded="false" />
+                    <element signature="e#1148#1149#0" expanded="false" />
+                    <element signature="e#1209#1210#0" expanded="false" />
+                    <element signature="e#1261#1262#0" expanded="false" />
+                    <element signature="e#1304#1305#0" expanded="false" />
+                    <element signature="e#1343#1344#0" expanded="false" />
+                    <element signature="e#1407#1408#0" expanded="false" />
+                    <element signature="e#1463#1464#0" expanded="false" />
+                    <element signature="e#1501#1502#0" expanded="false" />
+                    <element signature="e#1535#1536#0" expanded="false" />
+                    <element signature="e#1590#1591#0" expanded="false" />
+                    <element signature="e#1636#1637#0" expanded="false" />
+                    <element signature="e#1679#1680#0" expanded="false" />
+                    <element signature="e#1716#1717#0" expanded="false" />
+                    <element signature="e#1778#1779#0" expanded="false" />
+                    <element signature="e#1830#1831#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -181,11 +203,11 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="PersonPropertiesMapping.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/PersonPropertiesMapping.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
+                <state relative-caret-position="75">
                   <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
                   <folding />
                 </state>
@@ -195,9 +217,34 @@
           <file leaf-file-name="People.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/People.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
+                <state relative-caret-position="105">
                   <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                  <folding />
+                  <folding>
+                    <element signature="e#303#304#0" expanded="false" />
+                    <element signature="e#328#329#0" expanded="false" />
+                    <element signature="e#361#362#0" expanded="false" />
+                    <element signature="e#389#390#0" expanded="false" />
+                    <element signature="e#424#425#0" expanded="false" />
+                    <element signature="e#458#459#0" expanded="false" />
+                    <element signature="e#509#510#0" expanded="false" />
+                    <element signature="e#555#556#0" expanded="false" />
+                    <element signature="e#583#584#0" expanded="false" />
+                    <element signature="e#610#611#0" expanded="false" />
+                    <element signature="e#647#648#0" expanded="false" />
+                    <element signature="e#679#680#0" expanded="false" />
+                    <element signature="e#709#710#0" expanded="false" />
+                    <element signature="e#738#739#0" expanded="false" />
+                    <element signature="e#779#780#0" expanded="false" />
+                    <element signature="e#815#816#0" expanded="false" />
+                    <element signature="e#854#855#0" expanded="false" />
+                    <element signature="e#886#887#0" expanded="false" />
+                    <element signature="e#939#940#0" expanded="false" />
+                    <element signature="e#981#982#0" expanded="false" />
+                    <element signature="e#1014#1015#0" expanded="false" />
+                    <element signature="e#1043#1044#0" expanded="false" />
+                    <element signature="e#1087#1088#0" expanded="false" />
+                    <element signature="e#1123#1124#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -304,10 +351,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
-    <option name="y" value="-343" />
-    <option name="width" value="1936" />
-    <option name="height" value="1186" />
+    <option name="x" value="1680" />
+    <option name="y" value="22" />
+    <option name="width" value="1920" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -334,31 +381,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SitesBackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -372,37 +435,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="enered" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -421,18 +458,14 @@
               <option name="myItemId" value="enered" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemId" value="SitesBackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -456,41 +489,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IntimaBackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="enered" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -742,14 +743,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -943,12 +936,6 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
     <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.39" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -1042,6 +1029,7 @@
       <workItem from="1481642816124" duration="5554000" />
       <workItem from="1481789611161" duration="16536000" />
       <workItem from="1482140043793" duration="16974000" />
+      <workItem from="1482225393188" duration="734000" />
     </task>
     <task id="LOCAL-00001" summary="changed display name">
       <created>1481643591615</created>
@@ -1061,14 +1049,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84738000" />
+    <option name="totallyTimeSpent" value="85472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-343" width="1936" height="1186" extended-state="6" />
+    <frame x="1680" y="22" width="1920" height="1058" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.60662526" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1080,7 +1069,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2671875" sideWeight="0.48576513" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26677316" sideWeight="0.48576513" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23447861" sideWeight="0.5142349" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24802111" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1092,7 +1081,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60662526" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1217,67 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="e#602#603#0" expanded="false" />
-            <element signature="e#640#641#0" expanded="false" />
-            <element signature="e#672#673#0" expanded="false" />
-            <element signature="e#698#699#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#756#757#0" expanded="false" />
-            <element signature="e#784#785#0" expanded="false" />
-            <element signature="e#816#817#0" expanded="false" />
-            <element signature="e#844#845#0" expanded="false" />
-            <element signature="e#886#887#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#951#952#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1018#1019#0" expanded="false" />
-            <element signature="e#1050#1051#0" expanded="false" />
-            <element signature="e#1085#1086#0" expanded="false" />
-            <element signature="e#1116#1117#0" expanded="false" />
-            <element signature="e#1164#1165#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1238#1239#0" expanded="false" />
-            <element signature="e#1268#1269#0" expanded="false" />
-            <element signature="e#1314#1315#0" expanded="false" />
-            <element signature="e#1352#1353#0" expanded="false" />
-            <element signature="e#1391#1392#0" expanded="false" />
-            <element signature="e#1426#1427#0" expanded="false" />
-            <element signature="e#1482#1483#0" expanded="false" />
-            <element signature="e#1530#1531#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1611#1612#0" expanded="false" />
-            <element signature="e#1674#1675#0" expanded="false" />
-            <element signature="e#1716#1717#0" expanded="false" />
-            <element signature="e#1748#1749#0" expanded="false" />
-            <element signature="e#1776#1777#0" expanded="false" />
-            <element signature="e#1818#1819#0" expanded="false" />
-            <element signature="e#1852#1853#0" expanded="false" />
-            <element signature="e#1886#1887#0" expanded="false" />
-            <element signature="e#1916#1917#0" expanded="false" />
-            <element signature="e#1962#1963#0" expanded="false" />
-            <element signature="e#2000#2001#0" expanded="false" />
-            <element signature="e#2031#2032#0" expanded="false" />
-            <element signature="e#2058#2059#0" expanded="false" />
-            <element signature="e#2098#2099#0" expanded="false" />
-            <element signature="e#2130#2131#0" expanded="false" />
-            <element signature="e#2165#2166#0" expanded="false" />
-            <element signature="e#2196#2197#0" expanded="false" />
-            <element signature="e#2244#2245#0" expanded="false" />
-            <element signature="e#2284#2285#0" expanded="false" />
-            <element signature="e#2319#2320#0" expanded="false" />
-            <element signature="e#2350#2351#0" expanded="false" />
-            <element signature="e#2398#2399#0" expanded="false" />
-            <element signature="e#2438#2439#0" expanded="false" />
-            <element signature="e#2470#2471#0" expanded="false" />
-            <element signature="e#2498#2499#0" expanded="false" />
-            <element signature="e#2540#2541#0" expanded="false" />
-            <element signature="e#2574#2575#0" expanded="false" />
-            <element signature="e#2606#2607#0" expanded="false" />
-            <element signature="e#2634#2635#0" expanded="false" />
-            <element signature="e#2676#2677#0" expanded="false" />
-            <element signature="e#2710#2711#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1409,7 +1336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1426,8 +1352,7 @@
         <state relative-caret-position="595">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1482140008933" expanded="true" signature="432:482" ph="INSERT INTO advertisers... " />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1436,7 +1361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1444,94 +1368,182 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10895">
           <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-          <folding>
-            <marker date="1482140009188" expanded="true" signature="576:671" ph="INSERT INTO escorts... " />
-            <marker date="1482140009188" expanded="true" signature="1709:1811" ph="SELECT id, s... escorts" />
-            <marker date="1482140009188" expanded="true" signature="4923:4957" ph="SELECT * FRO... escorts" />
-            <marker date="1482140009188" expanded="true" signature="8453:8506" ph="SELECT * FRO... escorts" />
-            <marker date="1482140009188" expanded="true" signature="12550:12625" ph="SELECT * FRO... escorts" />
-            <marker date="1482140009188" expanded="true" signature="15809:15872" ph="SELECT * FRO... escorts" />
-            <marker date="1482140009188" expanded="true" signature="19304:19350" ph="SELECT date_... escort_of_the" />
-            <marker date="1482140009188" expanded="true" signature="20188:20311" ph="SELECT id, s... escorts" />
-            <marker date="1482140009188" expanded="true" signature="23407:23530" ph="SELECT id, s... escorts" />
-            <marker date="1482140009188" expanded="true" signature="26700:26823" ph="SELECT id, s... escorts" />
-            <marker date="1482140009188" expanded="true" signature="29993:30116" ph="SELECT id, s... escorts" />
-            <marker date="1482140009188" expanded="true" signature="33283:33406" ph="SELECT id, s... escorts" />
-            <marker date="1482140009188" expanded="true" signature="36574:36697" ph="SELECT id, s... escorts" />
-            <marker date="1482140009188" expanded="true" signature="39869:39992" ph="SELECT id, s... escorts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/ContactMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="105">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/ConversationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2089#2103#0" expanded="true" />
-            <element signature="e#3172#3186#0" expanded="true" />
-            <marker date="1482146461117" expanded="true" signature="535:636" ph="INSERT INTO conversations... " />
-            <marker date="1482146461117" expanded="true" signature="1119:1167" ph="UPDATE conve... " />
-            <marker date="1482146461117" expanded="true" signature="1440:1482" ph="UPDATE conve... " />
-            <marker date="1482146461117" expanded="true" signature="1743:1785" ph="UPDATE conve... " />
-            <marker date="1482146461117" expanded="true" signature="2160:2205" ph="SELECT * FRO... conversations" />
-            <marker date="1482146461117" expanded="true" signature="3243:3288" ph="SELECT * FRO... conversations" />
-            <marker date="1482146461117" expanded="true" signature="4284:4322" ph="SELECT * FRO... conversations" />
+            <element signature="e#327#328#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+            <element signature="e#413#414#0" expanded="false" />
+            <element signature="e#447#448#0" expanded="false" />
+            <element signature="e#477#478#0" expanded="false" />
+            <element signature="e#523#524#0" expanded="false" />
+            <element signature="e#561#562#0" expanded="false" />
+            <element signature="e#599#600#0" expanded="false" />
+            <element signature="e#633#634#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1041#1042#0" expanded="false" />
+            <element signature="e#1080#1081#0" expanded="false" />
+            <element signature="e#1112#1113#0" expanded="false" />
+            <element signature="e#1165#1166#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/People.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="105">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#328#329#0" expanded="false" />
+            <element signature="e#361#362#0" expanded="false" />
+            <element signature="e#389#390#0" expanded="false" />
+            <element signature="e#424#425#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#555#556#0" expanded="false" />
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#610#611#0" expanded="false" />
+            <element signature="e#647#648#0" expanded="false" />
+            <element signature="e#679#680#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+            <element signature="e#738#739#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#886#887#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#981#982#0" expanded="false" />
+            <element signature="e#1014#1015#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="false" />
+            <element signature="e#1087#1088#0" expanded="false" />
+            <element signature="e#1123#1124#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/PersonPropertiesMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/ContactMesageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PeopleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="495">
           <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="215" column="27" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertiesMappingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/PersonProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="e#408#409#0" expanded="false" />
+            <element signature="e#443#444#0" expanded="false" />
+            <element signature="e#496#497#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+            <element signature="e#680#681#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#792#793#0" expanded="false" />
+            <element signature="e#823#824#0" expanded="false" />
+            <element signature="e#850#851#0" expanded="false" />
+            <element signature="e#890#891#0" expanded="false" />
+            <element signature="e#922#923#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1070#1071#0" expanded="false" />
+            <element signature="e#1111#1112#0" expanded="false" />
+            <element signature="e#1148#1149#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
+            <element signature="e#1304#1305#0" expanded="false" />
+            <element signature="e#1343#1344#0" expanded="false" />
+            <element signature="e#1407#1408#0" expanded="false" />
+            <element signature="e#1463#1464#0" expanded="false" />
+            <element signature="e#1501#1502#0" expanded="false" />
+            <element signature="e#1535#1536#0" expanded="false" />
+            <element signature="e#1590#1591#0" expanded="false" />
+            <element signature="e#1636#1637#0" expanded="false" />
+            <element signature="e#1679#1680#0" expanded="false" />
+            <element signature="e#1716#1717#0" expanded="false" />
+            <element signature="e#1778#1779#0" expanded="false" />
+            <element signature="e#1830#1831#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/ContactMesageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/ConversationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="108" column="28" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1482160416690" expanded="true" signature="471:554" ph="insert into people... " />
-            <marker date="1482160416690" expanded="true" signature="958:1041" ph="UPDATE peopl... " />
-            <marker date="1482160416690" expanded="true" signature="1431:1460" ph="DELETE FROM " />
-            <marker date="1482160416690" expanded="true" signature="1754:1785" ph="SELECT * FRO... people" />
+            <marker date="1482225388000" expanded="true" signature="535:636" ph="INSERT INTO conversations... " />
+            <marker date="1482225388000" expanded="true" signature="1119:1167" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="1440:1482" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="1743:1785" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="2160:2205" ph="SELECT * FRO... conversations" />
+            <marker date="1482225388000" expanded="true" signature="3243:3288" ph="SELECT * FRO... conversations" />
+            <marker date="1482225388000" expanded="true" signature="4284:4322" ph="SELECT * FRO... conversations" />
           </folding>
         </state>
       </provider>
@@ -1542,75 +1554,29 @@
           <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2877#2898#0" expanded="true" />
-            <marker date="1482149518383" expanded="true" signature="625:733" ph="INSERT INTO conversation_messages... " />
-            <marker date="1482149518383" expanded="true" signature="1194:1243" ph="UPDATE conve... " />
-            <marker date="1482149518383" expanded="true" signature="1463:1514" ph="UPDATE conve... " />
-            <marker date="1482149518383" expanded="true" signature="1734:1786" ph="UPDATE conve... " />
-            <marker date="1482149518383" expanded="true" signature="2006:2060" ph="UPDATE conve... " />
-            <marker date="1482149518383" expanded="true" signature="2280:2332" ph="UPDATE conve... " />
-            <marker date="1482149518383" expanded="true" signature="2552:2606" ph="UPDATE conve... " />
-            <marker date="1482149518383" expanded="true" signature="3008:3067" ph="SELECT * FRO... conversation_messages" />
-            <marker date="1482149518383" expanded="true" signature="3008:3092" ph="SELECT * FRO... conversation_messages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="215" column="27" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertiesMappingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1334#1359#0" expanded="true" />
-            <marker date="1482160672002" expanded="true" signature="545:635" ph="INSERT INTO person_has_properties... " />
-            <marker date="1482160672002" expanded="true" signature="982:1039" ph="UPDATE perso... " />
-            <marker date="1482160672002" expanded="true" signature="1469:1515" ph="SELECT * FRO... person_has_properties" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/PersonProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
+            <marker date="1482225388000" expanded="true" signature="625:733" ph="INSERT INTO conversation_messages... " />
+            <marker date="1482225388000" expanded="true" signature="1194:1243" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="1463:1514" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="1734:1786" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="2006:2060" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="2280:2332" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="2552:2606" ph="UPDATE conve... " />
+            <marker date="1482225388000" expanded="true" signature="3008:3092" ph="SELECT * FRO... conversation_messages" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="150" column="89" selection-start-line="150" selection-start-column="89" selection-end-line="150" selection-end-column="89" />
+        <state relative-caret-position="364">
+          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
           <folding>
-            <element signature="method#getByCategory#0;class#PersonPropertyController#0" expanded="false" />
-            <element signature="method#getNumberOfEscortsWithProperty#0;class#PersonPropertyController#0" expanded="false" />
-            <element signature="e#2546#2554#0" expanded="true" />
             <element signature="method#getByCode#0;class#PersonPropertyController#0" expanded="false" />
-            <marker date="1482162634566" expanded="true" signature="540:624" ph="SELECT field... person_has_properties" />
-            <marker date="1482162634566" expanded="true" signature="1501:1532" ph="SELECT * FRO... person_properties" />
-            <marker date="1482162634566" expanded="true" signature="3383:3467" ph="SELECT id FR... person_has_properties" />
-            <marker date="1482162634566" expanded="true" signature="4223:4267" ph="SELECT * FRO... person_properties" />
-            <marker date="1482162634566" expanded="true" signature="5112:5158" ph="SELECT * FRO... person_properties" />
+            <marker date="1482225614000" expanded="true" signature="540:624" ph="SELECT field... person_has_properties" />
+            <marker date="1482225614000" expanded="true" signature="1501:1532" ph="SELECT * FRO... person_properties" />
+            <marker date="1482225614000" expanded="true" signature="3383:3467" ph="SELECT id FR... person_has_properties" />
+            <marker date="1482225614000" expanded="true" signature="4223:4267" ph="SELECT * FRO... person_properties" />
+            <marker date="1482225614000" expanded="true" signature="5112:5158" ph="SELECT * FRO... person_properties" />
           </folding>
         </state>
       </provider>
