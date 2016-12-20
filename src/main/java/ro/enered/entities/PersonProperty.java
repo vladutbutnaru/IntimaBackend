@@ -13,6 +13,15 @@ public class PersonProperty {
     private Category escortCategory;
     private String value;
     private int numOfEscorts;
+    private int ppid;
+
+    public int getPpid() {
+        return ppid;
+    }
+
+    public void setPpid(int ppid) {
+        this.ppid = ppid;
+    }
 
     public int getNumOfEscorts() {
         return numOfEscorts;

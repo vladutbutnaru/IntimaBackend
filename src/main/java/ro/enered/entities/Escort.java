@@ -52,6 +52,15 @@ public class Escort {
     private ArrayList<EscortPrice> prices;
     private ArrayList<EscortSchedule> schedules;
     private ArrayList<EscortReview> reviews;
+    private ArrayList<PersonProperty> default_properties;
+
+    public ArrayList<PersonProperty> getDefault_properties() {
+        return default_properties;
+    }
+
+    public void setDefault_properties(ArrayList<PersonProperty> default_properties) {
+        this.default_properties = default_properties;
+    }
 
     public ArrayList<EscortReview> getReviews() {
         return reviews;

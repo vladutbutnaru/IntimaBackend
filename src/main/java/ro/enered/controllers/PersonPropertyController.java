@@ -18,7 +18,7 @@ public class PersonPropertyController  extends AbstractController {
 
         try {
 
-            stmt = conn.prepareStatement("SELECT field_value,person_property_id FROM person_has_properties WHERE person_id = ?");
+            stmt = conn.prepareStatement("SELECT field_value,person_property_id,id FROM person_has_properties WHERE person_id = ?");
 
             stmt.setInt(1,id);
             rs = stmt.executeQuery();
@@ -27,6 +27,9 @@ public class PersonPropertyController  extends AbstractController {
                 PersonProperty pr;
                 pr = getById(rs.getInt(2));
                 pr.setValue(rs.getString(1));
+                pr.setId(rs.getInt("id"));
+                pr.setPpid(rs.getInt("person_property_id"));
+
                 properties.add(pr);
             }
 
@@ -42,6 +45,39 @@ public class PersonPropertyController  extends AbstractController {
 
         return properties;
 
+    }
+    public static ArrayList<PersonProperty> getDefaultValues(){
+        ArrayList<PersonProperty> list=new ArrayList<PersonProperty>();
+        PreparedStatement pst;
+        ResultSet rs;
+        try {
+            pst=conn.prepareStatement("SELECT * FROM person_properties");
+            rs=pst.executeQuery();
+            while(rs.next()){
+                PersonProperty pp=new PersonProperty();
+                pp.setId(rs.getInt(1));
+                pp.setCode(rs.getString(2));
+                pp.setCategory(rs.getInt(3));
+                boolean multi=false;
+                if(rs.getInt(4)>0){
+                    multi=true;
+                }
+                pp.setMultipleSelect(multi);
+                pp.setSelectableValues(rs.getString(5));
+                boolean quick=false;
+                if(rs.getInt(6)>0){
+                    quick=true;
+                }
+                pp.setQuickFilter(quick);
+                pp.setEscortCategory(CategoryController.getById(rs.getInt(7)));
+                list.add(pp);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return list;
     }
 public static ArrayList<PersonProperty> getByCategory(int category, int escortCategory){
     ArrayList<PersonProperty> properties = new ArrayList<PersonProperty>();
@@ -157,7 +193,12 @@ public static int getNumberOfEscortsWithProperty(int escortCategory, int propert
                 pp.setCategory(rs.getInt(3));
                pp.setCode(rs.getString(2));
                 pp.setSelectableValues(rs.getString(5));
+                boolean multi=false;
+                if(rs.getInt(4)==1){
+                    multi=true;
+                }
 
+                pp.setMultipleSelect(multi);
             }
 
 
@@ -205,5 +246,6 @@ public static int getNumberOfEscortsWithProperty(int escortCategory, int propert
 
 
     }
+
 
 }

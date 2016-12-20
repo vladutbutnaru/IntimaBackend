@@ -214,6 +214,8 @@ public class Escorts extends javax.servlet.http.HttpServlet {
         if(path.equals(INFO)) {
             Escort e = EscortController.getById(Integer.parseInt(request.getParameter("escortID")));
             e.setProperties(PersonPropertyController.getPropertiesForEscort(e.getId()));
+            e.setDefault_properties(PersonPropertyController.getDefaultValues());
+
 
             String json = new Gson().toJson(e);
             response.setContentType("application/json");
