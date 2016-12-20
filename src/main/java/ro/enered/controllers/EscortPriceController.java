@@ -31,6 +31,7 @@ public class EscortPriceController  extends AbstractController{
                 ep.setDuration(rs.getString(3));
                 ep.setLocation(rs.getInt(2));
                 ep.setPrice(rs.getInt(4));
+                ep.setId(rs.getInt("id"));
                 prices.add(ep);
 
 

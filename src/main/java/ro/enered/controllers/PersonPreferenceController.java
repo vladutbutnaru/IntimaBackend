@@ -28,6 +28,7 @@ public class PersonPreferenceController extends AbstractController {
             while (rs.next()) {
                PersonPreference pf = getById(rs.getInt(4));
                 pf.setValue(rs.getString(2));
+                pf.setId(rs.getInt("person_preference_id"));
                 preferences.add(pf);
             }
 

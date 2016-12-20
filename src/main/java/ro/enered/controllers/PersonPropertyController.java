@@ -62,7 +62,7 @@ public class PersonPropertyController  extends AbstractController {
                 if(rs.getInt(4)>0){
                     multi=true;
                 }
-                pp.setMultipleSelect(multi);
+                pp.setMultipleSelect(rs.getInt("multiple_select"));
                 pp.setSelectableValues(rs.getString(5));
                 boolean quick=false;
                 if(rs.getInt(6)>0){
@@ -193,12 +193,7 @@ public static int getNumberOfEscortsWithProperty(int escortCategory, int propert
                 pp.setCategory(rs.getInt(3));
                pp.setCode(rs.getString(2));
                 pp.setSelectableValues(rs.getString(5));
-                boolean multi=false;
-                if(rs.getInt(4)==1){
-                    multi=true;
-                }
-
-                pp.setMultipleSelect(multi);
+                pp.setMultipleSelect(rs.getInt("multiple_select"));
             }
 
 

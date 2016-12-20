@@ -7,13 +7,21 @@ public class PersonProperty {
     private int id;
     private String code;
     private int category;
-    private boolean multipleSelect;
+    private int multipleSelect;
     private String selectableValues;
     private boolean quickFilter;
     private Category escortCategory;
     private String value;
     private int numOfEscorts;
     private int ppid;
+
+    public int getMultipleSelect() {
+        return multipleSelect;
+    }
+
+    public void setMultipleSelect(int multipleSelect) {
+        this.multipleSelect = multipleSelect;
+    }
 
     public int getPpid() {
         return ppid;
@@ -63,13 +71,6 @@ public class PersonProperty {
         this.category = category;
     }
 
-    public boolean isMultipleSelect() {
-        return multipleSelect;
-    }
-
-    public void setMultipleSelect(boolean multipleSelect) {
-        this.multipleSelect = multipleSelect;
-    }
 
     public String getSelectableValues() {
         return selectableValues;
