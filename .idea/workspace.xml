@@ -7,16 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ae5827-8bc7-4baf-84ac-5274573089cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ro/enered/api/Login.class" afterPath="$PROJECT_DIR$/target/classes/ro/enered/api/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/intimabackend.war" afterPath="$PROJECT_DIR$/target/intimabackend.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/api/Login.class" afterPath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/api/Login.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ro/enered/controllers/EscortController.class" afterPath="$PROJECT_DIR$/target/classes/ro/enered/controllers/EscortController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ro/enered/controllers/EscortPriceController.class" afterPath="$PROJECT_DIR$/target/classes/ro/enered/controllers/EscortPriceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ro/enered/controllers/EscortScheduleController.class" afterPath="$PROJECT_DIR$/target/classes/ro/enered/controllers/EscortScheduleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ro/enered/controllers/PersonPreferenceController.class" afterPath="$PROJECT_DIR$/target/classes/ro/enered/controllers/PersonPreferenceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/EscortController.class" afterPath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/EscortController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/EscortPriceController.class" afterPath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/EscortPriceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/EscortScheduleController.class" afterPath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/EscortScheduleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/PersonPreferenceController.class" afterPath="$PROJECT_DIR$/target/intimabackend/WEB-INF/classes/ro/enered/controllers/PersonPreferenceController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortPriceController.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortPriceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortScheduleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPreferenceController.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPreferenceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/intimabackend/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/intimabackend/WEB-INF/web.xml" />
     </list>
     <ignored path="SitesBackend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+            <state relative-caret-position="527">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -134,11 +136,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Escorts.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EscortController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="951" column="32" selection-start-line="951" selection-start-column="32" selection-end-line="951" selection-end-column="32" />
+            <state relative-caret-position="416">
+              <caret line="671" column="36" selection-start-line="671" selection-start-column="36" selection-end-line="671" selection-end-column="36" />
               <folding>
                 <element signature="method#registerEscort#0;class#EscortController#0" expanded="false" />
                 <element signature="method#getNewEscorts#0;class#EscortController#0" expanded="false" />
@@ -169,6 +181,32 @@
                 <marker date="1482320288653" expanded="true" signature="36574:36697" ph="SELECT id, s... escorts" />
                 <marker date="1482320288653" expanded="true" signature="39869:39992" ph="SELECT id, s... escorts" />
                 <marker date="1482320288653" expanded="true" signature="43064:43100" ph="UPDATE escor... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PeopleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PeopleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1482160416690" expanded="true" signature="471:554" ph="insert into people... " />
+                <marker date="1482160416690" expanded="true" signature="958:1041" ph="UPDATE peopl... " />
+                <marker date="1482160416690" expanded="true" signature="1431:1460" ph="DELETE FROM " />
+                <marker date="1482160416690" expanded="true" signature="1754:1785" ph="SELECT * FRO... people" />
               </folding>
             </state>
           </provider>
@@ -236,15 +274,15 @@
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertiesMappingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/ContactMesageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/PersonProperty.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPreferenceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortPriceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortScheduleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -337,6 +375,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IntimaBackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1011,7 +1079,7 @@
       <workItem from="1481569797064" duration="29000" />
       <workItem from="1481642816124" duration="5554000" />
       <workItem from="1481789611161" duration="16536000" />
-      <workItem from="1482140043793" duration="40081000" />
+      <workItem from="1482140043793" duration="42480000" />
     </task>
     <task id="LOCAL-00001" summary="changed display name">
       <created>1481643591615</created>
@@ -1048,11 +1116,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482247909729</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed display name">
+      <created>1482326262231</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1482326262231</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107845000" />
+    <option name="totallyTimeSpent" value="110244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-343" width="1936" height="1186" extended-state="6" />
@@ -1409,20 +1484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PeopleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1482160416690" expanded="true" signature="471:554" ph="insert into people... " />
-            <marker date="1482160416690" expanded="true" signature="958:1041" ph="UPDATE peopl... " />
-            <marker date="1482160416690" expanded="true" signature="1431:1460" ph="DELETE FROM " />
-            <marker date="1482160416690" expanded="true" signature="1754:1785" ph="SELECT * FRO... people" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/ConversationMessageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1500,14 +1561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3400">
-          <caret line="215" column="63" selection-start-line="215" selection-start-column="63" selection-end-line="215" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -1590,18 +1643,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortScheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        <state relative-caret-position="688">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+          <folding>
+            <marker date="1482325653164" expanded="true" signature="650:699" ph="SELECT * FRO... escort_schedule" />
+            <marker date="1482325653164" expanded="true" signature="1826:1941" ph="UPDATE escor... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PeopleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1482160416690" expanded="true" signature="471:554" ph="insert into people... " />
+            <marker date="1482160416690" expanded="true" signature="958:1041" ph="UPDATE peopl... " />
+            <marker date="1482160416690" expanded="true" signature="1431:1460" ph="DELETE FROM " />
+            <marker date="1482160416690" expanded="true" signature="1754:1785" ph="SELECT * FRO... people" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="951" column="32" selection-start-line="951" selection-start-column="32" selection-end-line="951" selection-end-column="32" />
+        <state relative-caret-position="416">
+          <caret line="671" column="36" selection-start-line="671" selection-start-column="36" selection-end-line="671" selection-end-column="36" />
           <folding>
             <element signature="method#registerEscort#0;class#EscortController#0" expanded="false" />
             <element signature="method#getNewEscorts#0;class#EscortController#0" expanded="false" />
@@ -1636,21 +1714,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortScheduleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-          <folding>
-            <marker date="1482325653164" expanded="true" signature="650:699" ph="SELECT * FRO... escort_schedule" />
-            <marker date="1482325653164" expanded="true" signature="1826:1941" ph="UPDATE escor... " />
-          </folding>
+        <state relative-caret-position="500">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+        <state relative-caret-position="408">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
           <folding />
         </state>
       </provider>
