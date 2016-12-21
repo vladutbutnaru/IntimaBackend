@@ -6,9 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="18ae5827-8bc7-4baf-84ac-5274573089cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+=======
+    <list default="true" id="18ae5827-8bc7-4baf-84ac-5274573089cb" name="Default" comment="" />
+>>>>>>> Stashed changes
     <ignored path="SitesBackend.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -148,8 +152,13 @@
           <file leaf-file-name="PersonPropertyController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertyController.java">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
                 <state relative-caret-position="578">
                   <caret line="150" column="89" selection-start-line="150" selection-start-column="89" selection-end-line="150" selection-end-column="89" />
+=======
+                <state relative-caret-position="184">
+                  <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+>>>>>>> Stashed changes
                   <folding>
                     <element signature="method#getByCategory#0;class#PersonPropertyController#0" expanded="false" />
                     <element signature="method#getNumberOfEscortsWithProperty#0;class#PersonPropertyController#0" expanded="false" />
@@ -1042,6 +1051,10 @@
       <workItem from="1481642816124" duration="5554000" />
       <workItem from="1481789611161" duration="16536000" />
       <workItem from="1482140043793" duration="16974000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1482225393188" duration="1492000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="changed display name">
       <created>1481643591615</created>
@@ -1061,7 +1074,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="84738000" />
+=======
+    <option name="totallyTimeSpent" value="86230000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-343" width="1936" height="1186" extended-state="6" />
@@ -1599,8 +1616,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertyController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="578">
           <caret line="150" column="89" selection-start-line="150" selection-start-column="89" selection-end-line="150" selection-end-column="89" />
+=======
+        <state relative-caret-position="184">
+          <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="method#getByCategory#0;class#PersonPropertyController#0" expanded="false" />
             <element signature="method#getNumberOfEscortsWithProperty#0;class#PersonPropertyController#0" expanded="false" />
