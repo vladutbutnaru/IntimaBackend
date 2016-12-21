@@ -77,6 +77,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/account</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
         <url-pattern>/escorts/ofthemonth</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

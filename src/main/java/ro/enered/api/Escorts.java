@@ -38,6 +38,7 @@ public class Escorts extends javax.servlet.http.HttpServlet {
     private static final String INFO = "/escorts/info";
     private static final String FILTER = "/escorts/filter";
     private static final String REGISTER = "/escorts/register";
+    private static final String ACCOUNT = "/escorts/account";
 
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         processRequest(request,response);
@@ -52,6 +53,17 @@ public class Escorts extends javax.servlet.http.HttpServlet {
     private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)  throws javax.servlet.ServletException, IOException  {
         String path = request.getServletPath();
         System.out.println(path);
+        if(path.equals(ACCOUNT)) {
+
+            EscortController ec=new EscortController();
+            int id_escorta=Integer.parseInt(request.getParameter("id"));
+            Escort e=ec.getById(id_escorta);
+
+            String json = new Gson().toJson(e);
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(json);
+        }
        if(path.equals(NEW)) {
            ArrayList<Escort> escorts = EscortController.getNewEscorts(4);
 
