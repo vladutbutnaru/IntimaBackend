@@ -53,6 +53,33 @@ public class Escort {
     private ArrayList<EscortSchedule> schedules;
     private ArrayList<EscortReview> reviews;
     private ArrayList<PersonProperty> default_properties;
+    private String greutate;
+    private String dimensiune;
+    private String moneda;
+
+    public String getGreutate() {
+        return greutate;
+    }
+
+    public void setGreutate(String greutate) {
+        this.greutate = greutate;
+    }
+
+    public String getDimensiune() {
+        return dimensiune;
+    }
+
+    public void setDimensiune(String dimensiune) {
+        this.dimensiune = dimensiune;
+    }
+
+    public String getMoneda() {
+        return moneda;
+    }
+
+    public void setMoneda(String moneda) {
+        this.moneda = moneda;
+    }
 
     public ArrayList<PersonProperty> getDefault_properties() {
         return default_properties;

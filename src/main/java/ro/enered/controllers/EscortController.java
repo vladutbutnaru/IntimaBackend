@@ -174,6 +174,9 @@ Escort e = new Escort();
                 e.setPhotos(EscortPhotoController.getPhotosForEscort(e));
                 e.setSchedules(EscortScheduleController.getScheduleForEscort(e));
                 e.setReviews(EscortReviewController.getEscortReviews(e.getId()));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
 
             }
 
@@ -265,6 +268,9 @@ Escort e = new Escort();
                     e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                     e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
                     e.setPrices(EscortPriceController.getPricesForEscort(e));
+                    e.setDimensiune(rs.getString(38));
+                    e.setGreutate(rs.getString(39));
+                    e.setMoneda(rs.getString(40));
                     escorts.add(e);
                 }
 
@@ -337,6 +343,9 @@ Escort e = new Escort();
                 e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                 e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
                 e.setPrices(EscortPriceController.getPricesForEscort(e));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
                 escorts.add(e);
 
             }
@@ -406,6 +415,9 @@ Escort e = new Escort();
                         e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                         e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
                         e.setPrices(EscortPriceController.getPricesForEscort(e));
+                        e.setDimensiune(rs.getString(38));
+                        e.setGreutate(rs.getString(39));
+                        e.setMoneda(rs.getString(40));
 
                         escorts.add(e);
                     }
@@ -510,6 +522,9 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
 //                e.setCategory(CategoryController.getById(rs.getInt(37)));
             e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
             e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
+            e.setDimensiune(rs.getString(38));
+            e.setGreutate(rs.getString(39));
+            e.setMoneda(rs.getString(40));
             escorts.add(e);
 
         }
@@ -582,6 +597,9 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
 //                e.setCategory(CategoryController.getById(rs.getInt(37)));
                 e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                 e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
                 escorts.add(e);
 
             }
@@ -652,6 +670,9 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
 //                e.setCategory(CategoryController.getById(rs.getInt(37)));
                 e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                 e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
                 escorts.add(e);
 
             }
@@ -722,6 +743,9 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
 //                e.setCategory(CategoryController.getById(rs.getInt(37)));
                 e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                 e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
                 escorts.add(e);
 
             }
@@ -790,6 +814,9 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
 //                e.setCategory(CategoryController.getById(rs.getInt(37)));
                 e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                 e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
                 escorts.add(e);
 
             }
@@ -859,6 +886,9 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
 //                e.setCategory(CategoryController.getById(rs.getInt(37)));
                 e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                 e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
                 escorts.add(e);
 
             }
@@ -928,6 +958,9 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
 //                e.setCategory(CategoryController.getById(rs.getInt(37)));
                 e.setEscortProfilePicture(EscortPhotoController.getProfilePhotoForEscort(e));
                 e.setAge(DateHelper.getAge(new Date(e.getBirthDate().getTime())));
+                e.setDimensiune(rs.getString(38));
+                e.setGreutate(rs.getString(39));
+                e.setMoneda(rs.getString(40));
                 escorts.add(e);
 
             }
