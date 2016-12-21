@@ -10,3 +10,5 @@ target/classes/ro/enered/controllers/AdvertiserController.class
 target/classes/ro/enered/controllers/PersonPropertyController.class
 
 .idea/workspace.xml
+
+target/*
