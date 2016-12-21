@@ -113,5 +113,16 @@ public class PersonPreferenceController extends AbstractController {
 
 
     }
+    public static void updateP(int id,String v){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("update person_has_preference set value=? where id=?");
+            pst.setString(1,v);
+            pst.setInt(2,id);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

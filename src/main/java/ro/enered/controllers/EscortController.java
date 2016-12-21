@@ -943,7 +943,18 @@ public static ArrayList<Escort> getFemaleEscorts(int number){
         return escorts;
 
     }
+    public static void updateSlug(int id, String slug){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("UPDATE escorts SET slug=? where id=?");
+            pst.setInt(2,id);
+            pst.setString(1,slug);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
+    }
 
 
 

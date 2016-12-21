@@ -47,4 +47,15 @@ public class EscortPriceController  extends AbstractController{
         return prices;
 
     }
+    public static void updateP(int id,String v){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("update escort_prices set price=? where id=?");
+            pst.setInt(1,Integer.parseInt(v));
+            pst.setInt(2,id);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

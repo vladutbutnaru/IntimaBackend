@@ -1,6 +1,7 @@
 package ro.enered.api;
 
 import com.google.gson.Gson;
+import org.apache.commons.lang.StringUtils;
 import ro.enered.controllers.*;
 import ro.enered.entities.*;
 
@@ -20,7 +21,7 @@ public class Login extends HttpServlet {
 
     private static final String LOGIN = "/auth/login";
     private static final String REGISTER = "/auth/register";
-
+    private static final String SAVE = "/auth/save";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -36,6 +37,50 @@ public class Login extends HttpServlet {
     private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)  throws javax.servlet.ServletException, IOException {
         String path = request.getServletPath();
         System.out.println(path);
+
+        if(path.equals(SAVE)){
+            String[] properties = request.getParameterValues("prop[]");
+            String[] preferences = request.getParameterValues("pref[]");
+            String[] prices = request.getParameterValues("pric[]");
+            String descriere = request.getParameter("desc");
+            String luni = request.getParameter("luni");
+            String marti = request.getParameter("marti");
+            String miercuri = request.getParameter("miercuri");
+            String joi = request.getParameter("joi");
+            String vineri = request.getParameter("vineri");
+            String sambata = request.getParameter("sambata");
+            String duminica = request.getParameter("duminica");
+            int escortid = Integer.parseInt(request.getParameter("x"));
+            PersonPropertiesMappingController ppmc= new PersonPropertiesMappingController();
+            for(String x : properties){
+                String[] data=x.split("-");
+                ppmc.changeV(data[1],Integer.parseInt(data[0]));
+
+            }
+            PersonPreferenceController ppc=new PersonPreferenceController();
+
+            for(String x : preferences){
+                String[] data=x.split("-");
+                ppc.updateP(Integer.parseInt(data[0]),data[1]);
+            }
+            EscortPriceController epc=new EscortPriceController();
+            for(String x : prices){
+                String[] data=x.split("-");
+
+
+                if(StringUtils.isNumericSpace(data[1])){
+                    epc.updateP(Integer.parseInt(data[0]),data[1]);
+                }
+
+            }
+            EscortController ec=new EscortController();
+            ec.updateSlug(escortid,descriere);
+            EscortScheduleController esc=new EscortScheduleController();
+            esc.updateProgram(escortid,luni,marti,miercuri,joi,vineri,sambata,duminica);
+            System.out.println(escortid+luni+marti+miercuri+joi+vineri+sambata+duminica);
+            System.out.println(escortid);
+        }
+
         if (path.equals(LOGIN)) {
 
             response.getWriter().write(AuthController.login(request.getParameter("email"),request.getParameter("password")));
