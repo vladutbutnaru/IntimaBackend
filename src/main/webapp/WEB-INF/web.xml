@@ -22,7 +22,19 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Blog</servlet-name>
-        <url-pattern>/blog</url-pattern>
+        <url-pattern>/blog/articles</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/article</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/tests</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/test</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
