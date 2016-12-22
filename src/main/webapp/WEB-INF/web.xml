@@ -16,9 +16,21 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>ro.enered.api.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Accounts</servlet-name>
+        <servlet-class>ro.enered.api.Accounts</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
         <url-pattern>/escorts/new</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Accounts</servlet-name>
+        <url-pattern>/account/edit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Accounts</servlet-name>
+        <url-pattern>/account/save</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

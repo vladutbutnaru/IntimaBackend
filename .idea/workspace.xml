@@ -7,9 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18ae5827-8bc7-4baf-84ac-5274573089cb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/api/Accounts.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java" afterPath="$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="SitesBackend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,165 +40,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java">
+      <file leaf-file-name="Accounts.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Accounts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+            <state relative-caret-position="136">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EscortScheduleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortScheduleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-              <folding>
-                <marker date="1482325653164" expanded="true" signature="650:699" ph="SELECT * FRO... escort_schedule" />
-                <marker date="1482325653164" expanded="true" signature="1826:1941" ph="UPDATE escor... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonPreferenceController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPreferenceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="125" column="5" selection-start-line="115" selection-start-column="3" selection-end-line="125" selection-end-column="5" />
-              <folding>
-                <element signature="method#getPreferencesForEscort#0;class#PersonPreferenceController#0" expanded="false" />
-                <element signature="method#getAllPreferences#0;class#PersonPreferenceController#0" expanded="false" />
-                <marker date="1482319254150" expanded="true" signature="631:686" ph="SELECT * FRO... person_has_preference" />
-                <marker date="1482319254150" expanded="true" signature="1639:1672" ph="SELECT id FR... person_preferences" />
-                <marker date="1482319254150" expanded="true" signature="2495:2540" ph="SELECT * FRO... person_preferences" />
-                <marker date="1482319254150" expanded="true" signature="3190:3241" ph="update perso... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonPropertyController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PersonPropertyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="242" column="4" selection-start-line="242" selection-start-column="4" selection-end-line="242" selection-end-column="4" />
-              <folding>
-                <element signature="method#getPropertiesForEscort#0;class#PersonPropertyController#0" expanded="false" />
-                <element signature="method#getDefaultValues#0;class#PersonPropertyController#0" expanded="false" />
-                <element signature="e#1464#1480#0" expanded="true" />
-                <element signature="method#getByCategory#0;class#PersonPropertyController#0" expanded="false" />
-                <element signature="method#getNumberOfEscortsWithProperty#0;class#PersonPropertyController#0" expanded="false" />
-                <element signature="e#3827#3835#0" expanded="true" />
-                <element signature="method#getById#0;class#PersonPropertyController#0" expanded="false" />
-                <marker date="1482319002352" expanded="true" signature="540:627" ph="SELECT field... person_has_properties" />
-                <marker date="1482319002352" expanded="true" signature="1590:1621" ph="SELECT * FRO... person_properties" />
-                <marker date="1482319002352" expanded="true" signature="2782:2813" ph="SELECT * FRO... person_properties" />
-                <marker date="1482319002352" expanded="true" signature="4664:4748" ph="SELECT id FR... person_has_properties" />
-                <marker date="1482319002352" expanded="true" signature="5504:5548" ph="SELECT * FRO... person_properties" />
-                <marker date="1482319002352" expanded="true" signature="6460:6506" ph="SELECT * FRO... person_properties" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EscortPriceController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortPriceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-              <folding>
-                <marker date="1482319603813" expanded="true" signature="630:677" ph="SELECT * FRO... escort_prices" />
-                <marker date="1482319603813" expanded="true" signature="1562:1605" ph="update escor... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Escorts.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EscortController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="146" column="44" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
-              <folding>
-                <element signature="method#getNewEscorts#0;class#EscortController#0" expanded="false" />
-                <marker date="1482336598567" expanded="true" signature="576:671" ph="INSERT INTO escorts... " />
-                <marker date="1482336598567" expanded="true" signature="1709:1811" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="4923:4957" ph="SELECT * FRO... escorts" />
-                <marker date="1482336598567" expanded="true" signature="8600:8653" ph="SELECT * FRO... escorts" />
-                <marker date="1482336598567" expanded="true" signature="12856:12931" ph="SELECT * FRO... escorts" />
-                <marker date="1482336598567" expanded="true" signature="16262:16325" ph="SELECT * FRO... escorts" />
-                <marker date="1482336598567" expanded="true" signature="19928:19974" ph="SELECT date_... escort_of_the" />
-                <marker date="1482336598567" expanded="true" signature="20812:20935" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="24166:24289" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="27606:27729" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="31046:31169" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="34483:34606" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="37921:38044" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="41363:41486" ph="SELECT id, s... escorts" />
-                <marker date="1482336598567" expanded="true" signature="44705:44741" ph="UPDATE escor... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Escort.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-              <folding>
-                <element signature="e#1860#1861#0" expanded="true" />
-                <element signature="e#1891#1892#0" expanded="true" />
-                <element signature="e#1939#1940#0" expanded="true" />
-                <element signature="e#1979#1980#0" expanded="true" />
-                <element signature="e#2016#2017#0" expanded="true" />
-                <element signature="e#2049#2050#0" expanded="true" />
-                <element signature="e#2101#2102#0" expanded="true" />
-                <element signature="e#2145#2146#0" expanded="true" />
-                <element signature="e#2178#2179#0" expanded="true" />
-                <element signature="e#2207#2208#0" expanded="true" />
-                <element signature="e#2251#2252#0" expanded="true" />
-                <element signature="e#2287#2288#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PeopleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PeopleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1482160416690" expanded="true" signature="471:554" ph="insert into people... " />
-                <marker date="1482160416690" expanded="true" signature="958:1041" ph="UPDATE peopl... " />
-                <marker date="1482160416690" expanded="true" signature="1431:1460" ph="DELETE FROM " />
-                <marker date="1482160416690" expanded="true" signature="1754:1785" ph="SELECT * FRO... people" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -223,7 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/Member.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/MemberFavoriteEscort.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/Notification.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/People.java" />
@@ -271,9 +117,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/api/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortScheduleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/enered/api/Accounts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java" />
       </list>
     </option>
   </component>
@@ -303,10 +150,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
-    <option name="y" value="-343" />
+    <option name="x" value="1912" />
+    <option name="y" value="-227" />
     <option name="width" value="1936" />
-    <option name="height" value="1186" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1070,7 +917,7 @@
       <workItem from="1481569797064" duration="29000" />
       <workItem from="1481642816124" duration="5554000" />
       <workItem from="1481789611161" duration="16536000" />
-      <workItem from="1482140043793" duration="43007000" />
+      <workItem from="1482140043793" duration="46854000" />
     </task>
     <task id="LOCAL-00001" summary="changed display name">
       <created>1481643591615</created>
@@ -1121,14 +968,21 @@
       <option name="project" value="LOCAL" />
       <updated>1482336082832</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changed display name">
+      <created>1482336617545</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1482336617545</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110771000" />
+    <option name="totallyTimeSpent" value="114618000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-343" width="1936" height="1186" extended-state="6" />
+    <frame x="1912" y="-227" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1137,16 +991,16 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992566" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24476987" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992566" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21747212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24476987" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830188" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2671875" sideWeight="0.48576513" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23447861" sideWeight="0.5142349" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2671875" sideWeight="0.48060942" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2671875" sideWeight="0.5193906" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24802111" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1187,7 +1041,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/6.0.4/mysql-connector-java-6.0.4-sources.jar!/com/mysql/cj/jdbc/result/ResultSetImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/utils/DateHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -1647,9 +1500,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="64" column="45" selection-start-line="61" selection-start-column="12" selection-end-line="64" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/PeopleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="663">
           <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1661,47 +1522,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Escorts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-          <folding>
-            <element signature="e#1860#1861#0" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1939#1940#0" expanded="true" />
-            <element signature="e#1979#1980#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2101#2102#0" expanded="true" />
-            <element signature="e#2145#2146#0" expanded="true" />
-            <element signature="e#2178#2179#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
-            <element signature="e#2251#2252#0" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/controllers/EscortController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="146" column="44" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
+        <state relative-caret-position="-289">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
           <folding>
             <element signature="method#getNewEscorts#0;class#EscortController#0" expanded="false" />
             <marker date="1482336598567" expanded="true" signature="576:671" ph="INSERT INTO escorts... " />
@@ -1720,6 +1544,30 @@
             <marker date="1482336598567" expanded="true" signature="41363:41486" ph="SELECT id, s... escorts" />
             <marker date="1482336598567" expanded="true" signature="44705:44741" ph="UPDATE escor... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/entities/Escort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/enered/api/Accounts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
