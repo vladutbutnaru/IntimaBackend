@@ -16,6 +16,26 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>ro.enered.api.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Blog</servlet-name>
+        <servlet-class>ro.enered.api.Blog</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/articles</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/article</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/tests</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/test</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
         <url-pattern>/escorts/new</url-pattern>
@@ -74,6 +94,10 @@
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
         <url-pattern>/escorts/other</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Escorts</servlet-name>
+        <url-pattern>/escorts/account</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>

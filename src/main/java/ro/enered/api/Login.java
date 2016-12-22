@@ -22,6 +22,8 @@ public class Login extends HttpServlet {
     private static final String LOGIN = "/auth/login";
     private static final String REGISTER = "/auth/register";
     private static final String SAVE = "/auth/save";
+    private static final String ADMIN_LOGIN ="/auth/admin/login";
+
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
