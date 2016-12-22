@@ -37,6 +37,10 @@
         <url-pattern>/blog/test</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/test/finished</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
         <url-pattern>/escorts/new</url-pattern>
     </servlet-mapping>

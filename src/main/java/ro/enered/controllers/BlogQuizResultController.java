@@ -35,6 +35,7 @@ public class BlogQuizResultController extends AbstractController{
                     result.setTitle(rs.getString(2));
                     result.setMin(rs.getInt(3));
                     result.setMax(rs.getInt(4));
+                    result.setContent(rs.getString(5));
                     results.add(result);
 
                 }

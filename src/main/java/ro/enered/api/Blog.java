@@ -3,9 +3,11 @@ package ro.enered.api;
 import com.google.gson.Gson;
 
 import ro.enered.controllers.BlogArticleController;
+import ro.enered.controllers.BlogQuizResultController;
 import ro.enered.controllers.BlogTestController;
 import ro.enered.entities.Article;
 import ro.enered.entities.BlogArticle;
+import ro.enered.entities.BlogQuizResult;
 import ro.enered.entities.BlogTest;
 
 import javax.servlet.ServletException;
@@ -25,6 +27,9 @@ public class Blog extends HttpServlet {
     private static final String TESTS = "/blog/tests";
     private static final String TEST = "/blog/test";
 
+    private static final String FINISHED = "/blog/test/finished";
+
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request,response);
     }
@@ -36,7 +41,23 @@ public class Blog extends HttpServlet {
     private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)  throws javax.servlet.ServletException, IOException {
         String path = request.getServletPath();
         System.out.println(path);
+    if(path.equals(FINISHED)){
+        int score=Integer.parseInt(request.getParameter("score"));
+        int id=Integer.parseInt(request.getParameter("quiz_id"));
+        ArrayList<BlogQuizResult> res= BlogTestController.getById(id).getQuiz().getResults();
+        int poz=0;
+        for(BlogQuizResult x:res){
+            System.out.println(x.getMin()+"-"+x.getMax()+"-"+score);
+            if(x.getMin()<score && x.getMax()>score){
+                response.getWriter().write(poz+"");
+                break;
+            }
+            poz++;
 
+        }
+
+
+    }
         if (path.equals(ARTICLES)) {
             ArrayList<BlogArticle> articles = new ArrayList<BlogArticle>();
          if(request.getParameter("category").equals("")){

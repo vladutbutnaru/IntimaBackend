@@ -8,6 +8,15 @@ public class BlogQuizResult {
     private int min;
     private int max;
     private String title;
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public int getId() {
         return id;
