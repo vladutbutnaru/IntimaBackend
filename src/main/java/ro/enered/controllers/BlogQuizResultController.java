@@ -109,4 +109,16 @@ public class BlogQuizResultController extends AbstractController{
         return results;
 
     }
+    public static void AddNew(String t, int min, int max, String content){
+        PreparedStatement pst;
+        try {
+            pst= conn.prepareStatement("INSERT INTO blog_quiz_result (title,min,max,content) VALUES =(?,?,?,?)");
+           pst.setString(1, t);
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

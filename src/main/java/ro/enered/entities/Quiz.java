@@ -10,6 +10,15 @@ public class Quiz {
     private ArrayList<BlogQuizResult> quizresult;
     private ArrayList<BlogQuizAnswer> quizans;
     private ArrayList<BlogQuizQuestion> bqq;
+    private  ArrayList<BlogTest> tests;
+
+    public ArrayList<BlogTest> getTests() {
+        return tests;
+    }
+
+    public void setTests(ArrayList<BlogTest> tests) {
+        this.tests = tests;
+    }
 
     public ArrayList<BlogQuiz> getQuizz() {
         return quizz;

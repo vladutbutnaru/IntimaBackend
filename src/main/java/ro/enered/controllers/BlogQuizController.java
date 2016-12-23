@@ -64,7 +64,7 @@ public class BlogQuizController  extends AbstractController{
                 b.setId(rs.getInt(1));
                 b.setQuestions(BlogQuizQuestionController.getQuestionsForQuiz(rs.getString(2)));
                 b.setResults(BlogQuizResultController.getResultsForQuiz(rs.getString(3)));
-
+                bq.add(b);
             }
 
         } catch (SQLException ex) {

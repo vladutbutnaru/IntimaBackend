@@ -17,11 +17,12 @@ public class QuizController extends AbstractController{
          ArrayList<BlogQuizResult> quizresult=new ArrayList<BlogQuizResult>();
          ArrayList<BlogQuizAnswer> quizans=new ArrayList<BlogQuizAnswer>();
          ArrayList<BlogQuizQuestion> bqq=new ArrayList<BlogQuizQuestion>();
-
+        ArrayList<BlogTest> tests= new ArrayList<BlogTest>();
         q.setBqq(BlogQuizQuestionController.getAll());
         q.setQuizans(BlogQuizAnswerController.getAll());
         q.setQuizresult(BlogQuizResultController.getAll());
         q.setQuizz(BlogQuizController.getAll());
+        q.setTests(BlogTestController.getTests());
         return q;
     }
 }

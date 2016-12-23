@@ -41,6 +41,9 @@ public class Admin extends HttpServlet {
     private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)  throws javax.servlet.ServletException, IOException {
         String path = request.getServletPath();
         System.out.println(path);
+        if(path.equals(QUIZ_ADD)){
+
+        }
         if (path.equals(ARTICLES)) {
             ArrayList<BlogArticle> articles = new ArrayList<BlogArticle>();
             articles= BlogArticleController.getArticlesInCategory(0);
