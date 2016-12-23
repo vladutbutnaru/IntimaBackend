@@ -5,6 +5,7 @@ import ro.enered.entities.BlogArticleCategory;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  * Created by macbook on 22/12/2016.
@@ -41,5 +42,23 @@ public class BlogArticleCategoryController extends AbstractController{
 
     return category;
 
+    }
+    public static ArrayList<BlogArticleCategory> getAll(){
+        ArrayList<BlogArticleCategory> list= new ArrayList<BlogArticleCategory>();
+        PreparedStatement pst;
+        ResultSet rs;
+        try {
+            pst=conn.prepareStatement("select * from blog_article_categories");
+            rs=pst.executeQuery();
+            while(rs.next()){
+                BlogArticleCategory x =new BlogArticleCategory();
+                x.setId(rs.getInt("id"));
+                x.setCode(rs.getString("category_code"));
+                list.add(x);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }

@@ -14,6 +14,7 @@ public class BlogTest {
     private Administrator publisher;
     private BlogQuiz quiz;
 
+
     public int getId() {
         return id;
     }

@@ -58,4 +58,34 @@ public class BlogQuizQuestionController extends AbstractController{
         return questions;
 
     }
+    public static ArrayList<BlogQuizQuestion> getAll(){
+        ArrayList<BlogQuizQuestion> questions = new ArrayList<BlogQuizQuestion>();
+            PreparedStatement stmt;
+            ResultSet rs;
+            try {
+                //get all tests
+                stmt = conn.prepareStatement("SELECT * FROM blog_quiz_question");
+                rs = stmt.executeQuery();
+
+                while (rs.next()) {
+                    BlogQuizQuestion question = new BlogQuizQuestion();
+                    question.setId(rs.getInt(1));
+                    question.setTitle(rs.getString(2));
+                    question.setAnswers(BlogQuizAnswerController.getAnswersForQuestion(rs.getString(3)));
+
+                    questions.add(question);
+
+                }
+
+            } catch (SQLException ex) {
+                // handle any errors
+                System.out.println("SQLException: " + ex.getMessage());
+                System.out.println("SQLState: " + ex.getSQLState());
+                System.out.println("VendorError: " + ex.getErrorCode());
+                logger.error(ex.getMessage());
+
+            }
+        return questions;
+
+    }
 }

@@ -2,10 +2,13 @@ package ro.enered.controllers;
 
 import ro.enered.entities.BlogArticle;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by macbook on 22/12/2016.
@@ -101,5 +104,48 @@ BlogArticle a = new BlogArticle();
 
         return a;
 
+    }
+    public static void addNew(String title,int categ,String poza,String continut,int id_u){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("inster into blog_articles(category,title,publisher_id,featured_image,published_date,content,images,votes) values(?,?,?,?,?,?,?,?)");
+            pst.setInt(1,categ);
+            pst.setString(2,title);
+            pst.setInt(3,id_u);
+            pst.setString(4,poza);
+            Date date = new Date();
+            pst.setTimestamp(5,new Timestamp(date.getTime()));
+            pst.setString(6,continut);
+            pst.setString(7,"");
+            pst.setInt(8,0);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void updateArt(String title,int categ,String poza,String continut,int id){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("UPDATE blog_articles SET category=?,title=?,featured_image=?,content=? where id=?");
+            pst.setInt(1,categ);
+            pst.setString(2,title);
+            pst.setString(3,poza);
+            pst.setString(4,continut);
+            pst.setInt(5,id);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void deleteArt(int id){
+        PreparedStatement pst;
+        try {
+        pst=conn.prepareStatement("DELETE FROM blog_articles where id=?");
+        pst.setInt(1,id);
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

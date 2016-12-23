@@ -20,6 +20,49 @@
         <servlet-name>Blog</servlet-name>
         <servlet-class>ro.enered.api.Blog</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>ro.enered.api.Admin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/article/new</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/article/edit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/article/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/quiz/all</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/quiz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/quiz/new</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/quiz/edit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/quiz/delete</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>Blog</servlet-name>
         <url-pattern>/blog/articles</url-pattern>
@@ -35,6 +78,10 @@
     <servlet-mapping>
         <servlet-name>Blog</servlet-name>
         <url-pattern>/blog/test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/test/finished</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>
