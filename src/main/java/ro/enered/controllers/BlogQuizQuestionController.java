@@ -88,4 +88,17 @@ public class BlogQuizQuestionController extends AbstractController{
         return questions;
 
     }
+    public static void addNew(String t, String a){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("INSERT  INTO blog_quiz_question(title,answers) VALUES (?,?)");
+            pst.setString(1,t);
+            pst.setString(2,a);
+            pst.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 }

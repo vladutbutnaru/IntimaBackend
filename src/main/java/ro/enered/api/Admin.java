@@ -1,9 +1,7 @@
 package ro.enered.api;
 
 import com.google.gson.Gson;
-import ro.enered.controllers.BlogArticleController;
-import ro.enered.controllers.BlogTestController;
-import ro.enered.controllers.QuizController;
+import ro.enered.controllers.*;
 import ro.enered.entities.BlogArticle;
 import ro.enered.entities.BlogTest;
 import ro.enered.entities.Quiz;
@@ -20,7 +18,7 @@ import java.util.ArrayList;
  */
 public class Admin extends HttpServlet {
     private static final String ARTICLES = "/admin/blog";
-    private static final String ARTICLE_ADD = "/admin/blog/article/new";
+
     private static final String ARTICLE_EDIT = "/admin/blog/article/edit";
     private static final String ARTICLE_DELETE = "/admin/blog/article/delete";
     private static final String QUIZ = "/admin/blog/quiz";
@@ -28,7 +26,8 @@ public class Admin extends HttpServlet {
     private static final String QUIZ_ADD = "/admin/blog/quiz/new";
     private static final String QUIZ_DELETE = "/admin/blog/quiz/delete";
     private static final String QUIZALL = "/admin/blog/quiz/all";
-
+    private static final String RESULT = "/admin/blog/quiz/all";
+    private static final String ANSWER = "/admin/blog/quiz/all";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -41,9 +40,21 @@ public class Admin extends HttpServlet {
     private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)  throws javax.servlet.ServletException, IOException {
         String path = request.getServletPath();
         System.out.println(path);
-        if(path.equals(QUIZ_ADD)){
 
+        if(path.equals(RESULT)){
+            if(request.getParameter("id")!=""){
+                BlogQuizResultController bqr=new BlogQuizResultController();
+                bqr.AddNew(request.getParameter("title"),Integer.parseInt(request.getParameter("minim")),Integer.parseInt(request.getParameter("maxim")),request.getParameter("content"));
+            }else{
+                BlogQuizResultController bqr=new BlogQuizResultController();
+                bqr.Update(request.getParameter("title"),Integer.parseInt(request.getParameter("minim")),Integer.parseInt(request.getParameter("maxim")),request.getParameter("content"),Integer.parseInt(request.getParameter("id")));
+            }
         }
+        if(path.equals(QUIZ_ADD)){
+            BlogQuizQuestionController bqq=new BlogQuizQuestionController();
+            bqq.addNew(request.getParameter("title"),request.getParameter("answers"));
+        }
+
         if (path.equals(ARTICLES)) {
             ArrayList<BlogArticle> articles = new ArrayList<BlogArticle>();
             articles= BlogArticleController.getArticlesInCategory(0);

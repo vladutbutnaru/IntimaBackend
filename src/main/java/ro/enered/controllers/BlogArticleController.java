@@ -108,7 +108,7 @@ BlogArticle a = new BlogArticle();
     public static void addNew(String title,int categ,String poza,String continut,int id_u){
         PreparedStatement pst;
         try {
-            pst=conn.prepareStatement("inster into blog_articles(category,title,publisher_id,featured_image,published_date,content,images,votes) values(?,?,?,?,?,?,?,?)");
+            pst=conn.prepareStatement("INSERT into blog_articles(category,title,publisher_id,featured_image,published_date,content,images,votes) values(?,?,?,?,?,?,?,?)");
             pst.setInt(1,categ);
             pst.setString(2,title);
             pst.setInt(3,id_u);

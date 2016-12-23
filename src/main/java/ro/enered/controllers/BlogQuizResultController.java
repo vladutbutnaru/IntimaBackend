@@ -109,11 +109,34 @@ public class BlogQuizResultController extends AbstractController{
         return results;
 
     }
-    public static void AddNew(String t, int min, int max, String content){
+    public static void AddNew(String t, int mi, int ma, String content){
         PreparedStatement pst;
         try {
-            pst= conn.prepareStatement("INSERT INTO blog_quiz_result (title,min,max,content) VALUES =(?,?,?,?)");
-           pst.setString(1, t);
+            pst= conn.prepareStatement("INSERT INTO blog_quiz_results(title,mi,ma,content)  VALUES (?,?,?,?)");
+             pst.setString(1, t);
+            pst.setInt(2,mi);
+            pst.setInt(3,ma);
+            pst.setString(4,content);
+            pst.executeQuery();
+
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void Update(String t, int mi, int ma, String content,int id){
+        PreparedStatement pst;
+        try {
+            pst= conn.prepareStatement("UPDATE blog_quiz_results SET title=?,mi=?,ma=?,content=? where id=?");
+            pst.setString(1, t);
+            pst.setInt(2,mi);
+            pst.setInt(3,ma);
+            pst.setString(4,content);
+            pst.setInt(5,id);
+            pst.executeUpdate();
+
 
 
 
