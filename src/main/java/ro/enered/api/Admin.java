@@ -49,10 +49,10 @@ public class Admin extends HttpServlet {
             if(request.getParameter("id")!=""){
                 bqc.update(Integer.parseInt(request.getParameter("id")),request.getParameter("intrebari"),request.getParameter("rezultat"));
                 btc.update(request.getParameter("title"),request.getParameter("continut"),request.getParameter("poza"),Integer.parseInt(request.getParameter("id")));
-
+                System.out.println();
             }else{
                 int id =bqc.addN(request.getParameter("intrebari"),request.getParameter("rezultat"));
-                btc.update(request.getParameter("title"),request.getParameter("continut"),request.getParameter("poza"),id);
+                btc.addN(request.getParameter("title"),request.getParameter("continut"),request.getParameter("poza"),id);
 
             }
 

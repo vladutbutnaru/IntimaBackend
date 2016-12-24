@@ -91,7 +91,7 @@ public class BlogTestController extends AbstractController{
 
 
     }
-    public static void addN(String title, String content, Timestamp published,String image,int id){
+    public static void addN(String title, String content, String image,int id){
         PreparedStatement pst;
         Date date = new Date();
         try {
