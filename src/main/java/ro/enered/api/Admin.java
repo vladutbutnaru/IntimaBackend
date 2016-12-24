@@ -29,6 +29,8 @@ public class Admin extends HttpServlet {
     private static final String QUIZALL = "/admin/blog/quiz/all";
     private static final String RESULT = "/admin/blog/result/new";
     private static final String ANSWER = "/admin/blog/answer/new";
+    private static final String RESULTDEL = "/admin/blog/result/delete";
+    private static final String ANSWERDEL = "/admin/blog/answer/delete";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
