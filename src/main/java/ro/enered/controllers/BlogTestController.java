@@ -6,7 +6,9 @@ import ro.enered.entities.BlogTest;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by macbook on 22/12/2016.
@@ -89,6 +91,35 @@ public class BlogTestController extends AbstractController{
 
 
     }
+    public static void addN(String title, String content, Timestamp published,String image,int id){
+        PreparedStatement pst;
+        Date date = new Date();
+        try {
+            pst=conn.prepareStatement("insert into blog_tests(title,content,published_at,publisher_id,image,quiz_id) values(?,?,?,?,?,?)");
+            pst.setString(1,title);
+            pst.setString(2,content);
+            pst.setTimestamp(3,new Timestamp(date.getTime()));
+            pst.setInt(4,1);
+            pst.setString(5,image);
+            pst.setInt(6,id);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void update(String title, String content,String image ,int id){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("update blog_tests SET title=?,content=?,image=? where id=?");
+            pst.setString(1,title);
+            pst.setString(2,content);
+            pst.setString(3,image);
+            pst.setInt(4,id);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
+    }
 
 }

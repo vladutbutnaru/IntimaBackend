@@ -94,4 +94,29 @@ public class BlogQuizAnswerController extends AbstractController {
             }
         return answers;
     }
+    public static void addN(String title,int score){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("INSERT INTO blog_quiz_answers(title,score) VALUES (?,?)");
+            pst.setString(1,title);
+            pst.setInt(2,score);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static void update(int id,String title,int score){
+        PreparedStatement pst;
+
+        try {
+            pst=conn.prepareStatement("UPDATE blog_quiz_answers set title=?,score=? where id=?");
+            pst.setString(1,title);
+            pst.setInt(2,score);
+            pst.setInt(3,id);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

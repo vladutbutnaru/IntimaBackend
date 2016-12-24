@@ -82,4 +82,41 @@ public class BlogQuizController  extends AbstractController{
 
 
     }
+    public static int addN(String questions,String results){
+        PreparedStatement pst;
+        ResultSet rs;
+        int id=0;
+        try {
+            pst=conn.prepareStatement("insert into blog_quiz(questions,results) VALUES (?,?)");
+            pst.setString(1,questions);
+            pst.setString(2,results);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            pst=conn.prepareStatement("select id from blog_quiz where questions=? AND results=?");
+            pst.setString(1,questions);
+            pst.setString(2,results);
+            rs=pst.executeQuery();
+            while(rs.next()){
+                id=rs.getInt("id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+    public static void update(int id,String quest,String res){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("UPDATE blog_quiz set questions=?,results=? where id=?");
+            pst.setInt(1,id);
+            pst.setString(2,quest);
+            pst.setString(3,res);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

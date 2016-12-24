@@ -3,6 +3,7 @@ package ro.enered.api;
 import com.google.gson.Gson;
 import ro.enered.controllers.*;
 import ro.enered.entities.BlogArticle;
+import ro.enered.entities.BlogQuiz;
 import ro.enered.entities.BlogTest;
 import ro.enered.entities.Quiz;
 
@@ -26,8 +27,8 @@ public class Admin extends HttpServlet {
     private static final String QUIZ_ADD = "/admin/blog/quiz/new";
     private static final String QUIZ_DELETE = "/admin/blog/quiz/delete";
     private static final String QUIZALL = "/admin/blog/quiz/all";
-    private static final String RESULT = "/admin/blog/quiz/all";
-    private static final String ANSWER = "/admin/blog/quiz/all";
+    private static final String RESULT = "/admin/blog/result/new";
+    private static final String ANSWER = "/admin/blog/answer/new";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,20 +41,51 @@ public class Admin extends HttpServlet {
     private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)  throws javax.servlet.ServletException, IOException {
         String path = request.getServletPath();
         System.out.println(path);
+        if(path.equals(QUIZ_EDIT)){
+            BlogQuizController bqc=new BlogQuizController();
+            BlogTestController btc= new BlogTestController();
+            if(request.getParameter("id")!=""){
+                bqc.update(Integer.parseInt(request.getParameter("id")),request.getParameter("intrebari"),request.getParameter("rezultat"));
+                btc.update(request.getParameter("title"),request.getParameter("continut"),request.getParameter("poza"),Integer.parseInt(request.getParameter("id")));
 
+            }else{
+                int id =bqc.addN(request.getParameter("intrebari"),request.getParameter("rezultat"));
+                btc.update(request.getParameter("title"),request.getParameter("continut"),request.getParameter("poza"),id);
+
+            }
+
+
+        }
+        if(path.equals(ANSWER)){
+            BlogQuizAnswerController bqa=new BlogQuizAnswerController();
+            if(request.getParameter("id")!="") {
+                bqa.update(Integer.parseInt(request.getParameter("id")),request.getParameter("title"), Integer.parseInt(request.getParameter("answers")));
+            }else{
+
+                bqa.addN(request.getParameter("title"), Integer.parseInt(request.getParameter("answers")));
+            }
+            }
         if(path.equals(RESULT)){
             if(request.getParameter("id")!=""){
                 BlogQuizResultController bqr=new BlogQuizResultController();
-                bqr.AddNew(request.getParameter("title"),Integer.parseInt(request.getParameter("minim")),Integer.parseInt(request.getParameter("maxim")),request.getParameter("content"));
-            }else{
-                BlogQuizResultController bqr=new BlogQuizResultController();
                 bqr.Update(request.getParameter("title"),Integer.parseInt(request.getParameter("minim")),Integer.parseInt(request.getParameter("maxim")),request.getParameter("content"),Integer.parseInt(request.getParameter("id")));
+
+            }else{
+                 BlogQuizResultController bqr=new BlogQuizResultController();
+                bqr.AddNew(request.getParameter("title"),Integer.parseInt(request.getParameter("minim")),Integer.parseInt(request.getParameter("maxim")),request.getParameter("content"));
+
             }
         }
         if(path.equals(QUIZ_ADD)){
+
             BlogQuizQuestionController bqq=new BlogQuizQuestionController();
-            bqq.addNew(request.getParameter("title"),request.getParameter("answers"));
-        }
+            if(request.getParameter("id")!="") {
+                bqq.update(Integer.parseInt(request.getParameter("id")),request.getParameter("title"), request.getParameter("answers"));
+
+            }else {
+                bqq.addNew(request.getParameter("title"), request.getParameter("answers"));
+            }
+            }
 
         if (path.equals(ARTICLES)) {
             ArrayList<BlogArticle> articles = new ArrayList<BlogArticle>();

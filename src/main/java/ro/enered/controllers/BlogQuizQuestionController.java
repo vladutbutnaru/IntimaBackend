@@ -101,4 +101,17 @@ public class BlogQuizQuestionController extends AbstractController{
 
 
     }
+    public static void update(int id, String t,String cont){
+        PreparedStatement pst;
+        try {
+            pst=conn.prepareStatement("update blog_quiz_question set title=?,answers=? WHERE id=?");
+            pst.setInt(1,id);
+            pst.setString(2,t);
+            pst.setString(3,cont);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
