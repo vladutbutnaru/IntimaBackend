@@ -1,6 +1,7 @@
 package ro.enered.entities;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 /**
  * Created by macbook on 22/12/2016.
@@ -15,6 +16,15 @@ public class BlogArticle {
     private String content;
     private String images;
     private int votes;
+    private ArrayList<BlogVote> blogVotes;
+
+    public ArrayList<BlogVote> getBlogVotes() {
+        return blogVotes;
+    }
+
+    public void setBlogVotes(ArrayList<BlogVote> blogVotes) {
+        this.blogVotes = blogVotes;
+    }
 
     public int getId() {
         return id;

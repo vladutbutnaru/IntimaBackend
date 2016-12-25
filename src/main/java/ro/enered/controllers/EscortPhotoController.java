@@ -1,6 +1,5 @@
 package ro.enered.controllers;
 
-import ro.enered.entities.City;
 import ro.enered.entities.Escort;
 import ro.enered.entities.EscortPhoto;
 
@@ -30,7 +29,7 @@ public class EscortPhotoController extends AbstractController {
                 c.setPhoto(rs.getString(2));
                 c.setDate(rs.getTimestamp(3));
                 c.setStatus(rs.getInt(4));
-                c.setProfilePhoto(rs.getInt(5)>0?true:false);
+                c.setProfilePhoto(rs.getInt(5) > 0 ? true : false);
                 c.setCreatedAt(rs.getTimestamp(6));
                 c.setEscort(null);
 
@@ -65,7 +64,7 @@ public class EscortPhotoController extends AbstractController {
                 c.setPhoto(rs.getString(2));
                 c.setDate(rs.getTimestamp(3));
                 c.setStatus(rs.getInt(4));
-                c.setProfilePhoto(rs.getInt(5)>0?true:false);
+                c.setProfilePhoto(rs.getInt(5) > 0 ? true : false);
                 c.setCreatedAt(rs.getTimestamp(6));
                 c.setEscort(null);
 
@@ -82,7 +81,6 @@ public class EscortPhotoController extends AbstractController {
         return c;
 
     }
-
 
 
     public static ArrayList<EscortPhoto> getPhotosForEscort(Escort e) {
@@ -103,7 +101,7 @@ public class EscortPhotoController extends AbstractController {
                 c.setPhoto(rs.getString(2));
                 c.setDate(rs.getTimestamp(3));
                 c.setStatus(rs.getInt(4));
-                c.setProfilePhoto(rs.getInt(5)>0?true:false);
+                c.setProfilePhoto(rs.getInt(5) > 0 ? true : false);
                 c.setCreatedAt(rs.getTimestamp(6));
                 c.setEscort(null);
                 photos.add(c);
@@ -120,9 +118,6 @@ public class EscortPhotoController extends AbstractController {
         return photos;
 
     }
-
-
-
 
 
 }

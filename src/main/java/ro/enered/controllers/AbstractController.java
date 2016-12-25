@@ -5,8 +5,6 @@ import org.slf4j.LoggerFactory;
 import ro.enered.utils.DBConnection;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 /**
  * Created by macbook on 29/11/2016.

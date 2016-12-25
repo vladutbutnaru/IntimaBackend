@@ -144,6 +144,7 @@ public class Escort {
     public void setEscortProfilePicture(EscortPhoto escortProfilePicture) {
         this.escortProfilePicture = escortProfilePicture;
     }
+
     public int getAge() {
         return age;
     }

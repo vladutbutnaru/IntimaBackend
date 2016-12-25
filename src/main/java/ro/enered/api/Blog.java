@@ -1,11 +1,9 @@
 package ro.enered.api;
 
 import com.google.gson.Gson;
-
 import ro.enered.controllers.BlogArticleController;
-import ro.enered.controllers.BlogQuizResultController;
 import ro.enered.controllers.BlogTestController;
-import ro.enered.entities.Article;
+import ro.enered.controllers.BlogVoteController;
 import ro.enered.entities.BlogArticle;
 import ro.enered.entities.BlogQuizResult;
 import ro.enered.entities.BlogTest;
@@ -26,49 +24,48 @@ public class Blog extends HttpServlet {
     private static final String JOKES = "/blog/jokes";
     private static final String TESTS = "/blog/tests";
     private static final String TEST = "/blog/test";
-
+    private static final String VOTE = "/blog/article/vote";
     private static final String FINISHED = "/blog/test/finished";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request,response);
+        processRequest(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request,response);
+        processRequest(request, response);
     }
 
-    private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)  throws javax.servlet.ServletException, IOException {
+    private void processRequest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         String path = request.getServletPath();
         System.out.println(path);
-    if(path.equals(FINISHED)){
-        int score=Integer.parseInt(request.getParameter("score"));
-        int id=Integer.parseInt(request.getParameter("quiz_id"));
-        ArrayList<BlogQuizResult> res= BlogTestController.getById(id).getQuiz().getResults();
-        int poz=0;
-        for(BlogQuizResult x:res){
-            System.out.println(x.getMin()+"-"+x.getMax()+"-"+score);
-            if(x.getMin()<score && x.getMax()>score){
-                response.getWriter().write(poz+"");
-                break;
+        if (path.equals(FINISHED)) {
+            int score = Integer.parseInt(request.getParameter("score"));
+            int id = Integer.parseInt(request.getParameter("quiz_id"));
+            ArrayList<BlogQuizResult> res = BlogTestController.getById(id).getQuiz().getResults();
+            int poz = 0;
+            for (BlogQuizResult x : res) {
+                System.out.println(x.getMin() + "-" + x.getMax() + "-" + score);
+                if (x.getMin() < score && x.getMax() > score) {
+                    response.getWriter().write(poz + "");
+                    break;
+                }
+                poz++;
+
             }
-            poz++;
+
 
         }
-
-
-    }
         if (path.equals(ARTICLES)) {
             ArrayList<BlogArticle> articles = new ArrayList<BlogArticle>();
-         if(request.getParameter("category").equals("")){
+            if (request.getParameter("category").equals("")) {
 
-             articles= BlogArticleController.getArticlesInCategory(0);
+                articles = BlogArticleController.getArticlesInCategory(0);
 
-         }
-         else{
+            } else {
 
-             articles= BlogArticleController.getArticlesInCategory(Integer.parseInt(request.getParameter("category")));
-         }
+                articles = BlogArticleController.getArticlesInCategory(Integer.parseInt(request.getParameter("category")));
+            }
 
 
             String json = new Gson().toJson(articles);
@@ -87,9 +84,9 @@ public class Blog extends HttpServlet {
 
         }
         if (path.equals(TESTS)) {
-           ArrayList<BlogTest> tests = new ArrayList<BlogTest>();
+            ArrayList<BlogTest> tests = new ArrayList<BlogTest>();
 
-           tests =  BlogTestController.getTests();
+            tests = BlogTestController.getTests();
             String json = new Gson().toJson(tests);
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
@@ -97,13 +94,20 @@ public class Blog extends HttpServlet {
 
         }
         if (path.equals(TEST)) {
-           BlogTest test = new BlogTest();
+            BlogTest test = new BlogTest();
 
-            test =  BlogTestController.getById(Integer.parseInt(request.getParameter("id")));
+            test = BlogTestController.getById(Integer.parseInt(request.getParameter("id")));
             String json = new Gson().toJson(test);
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(json);
+
+        }
+        if (path.equals(VOTE)) {
+            String ip = request.getParameter("ip");
+            int articleId = Integer.parseInt(request.getParameter("article"));
+            BlogVoteController.vote(ip, articleId);
+
 
         }
     }

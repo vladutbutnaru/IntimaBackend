@@ -10,17 +10,17 @@ import java.util.ArrayList;
 /**
  * Created by macbook on 22/12/2016.
  */
-public class BlogArticleCategoryController extends AbstractController{
+public class BlogArticleCategoryController extends AbstractController {
 
-    public static BlogArticleCategory getById(int id){
-    BlogArticleCategory category =new BlogArticleCategory();
+    public static BlogArticleCategory getById(int id) {
+        BlogArticleCategory category = new BlogArticleCategory();
         PreparedStatement stmt;
 
         ResultSet rs;
         try {
 
             stmt = conn.prepareStatement("SELECT * FROM blog_article_categories WHERE id = ?");
-           stmt.setInt(1,id);
+            stmt.setInt(1, id);
 
             rs = stmt.executeQuery();
 
@@ -40,18 +40,19 @@ public class BlogArticleCategoryController extends AbstractController{
 
         }
 
-    return category;
+        return category;
 
     }
-    public static ArrayList<BlogArticleCategory> getAll(){
-        ArrayList<BlogArticleCategory> list= new ArrayList<BlogArticleCategory>();
+
+    public static ArrayList<BlogArticleCategory> getAll() {
+        ArrayList<BlogArticleCategory> list = new ArrayList<BlogArticleCategory>();
         PreparedStatement pst;
         ResultSet rs;
         try {
-            pst=conn.prepareStatement("select * from blog_article_categories");
-            rs=pst.executeQuery();
-            while(rs.next()){
-                BlogArticleCategory x =new BlogArticleCategory();
+            pst = conn.prepareStatement("select * from blog_article_categories");
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                BlogArticleCategory x = new BlogArticleCategory();
                 x.setId(rs.getInt("id"));
                 x.setCode(rs.getString("category_code"));
                 list.add(x);

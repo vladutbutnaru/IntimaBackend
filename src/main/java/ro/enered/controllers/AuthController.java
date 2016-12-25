@@ -1,7 +1,5 @@
 package ro.enered.controllers;
 
-import ro.enered.entities.Category;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,29 +9,28 @@ import java.sql.SQLException;
  */
 public class AuthController extends AbstractController {
 
-    public static String login(String username, String password){
+    public static String login(String username, String password) {
 
         String type = "";
         PreparedStatement stmt;
         int id = 0;
         ResultSet rs;
-String response ="";
+        String response = "";
         try {
 
             stmt = conn.prepareStatement("SELECT id FROM members WHERE email = ? AND password = ?");
-            stmt.setString(1,username);
-            stmt.setString(2,password);
+            stmt.setString(1, username);
+            stmt.setString(2, password);
 
             rs = stmt.executeQuery();
             logger.info("login: " + username);
             if (rs.next()) {
 
-                type="member";
-                id= rs.getInt(1);
-               response = "" + id + "," + type;
+                type = "member";
+                id = rs.getInt(1);
+                response = "" + id + "," + type;
 
-            }
-            else{
+            } else {
                 response = loginEscort(username, password);
 
             }
@@ -49,32 +46,31 @@ String response ="";
         return response;
 
 
-
     }
-    public static String loginEscort(String username, String password){
+
+    public static String loginEscort(String username, String password) {
 
         String type = "";
         PreparedStatement stmt;
         int id = 0;
         ResultSet rs;
-        String response ="";
+        String response = "";
         try {
 
             stmt = conn.prepareStatement("SELECT id FROM escorts WHERE email = ? AND password = ?");
-            stmt.setString(1,username);
-            stmt.setString(2,password);
+            stmt.setString(1, username);
+            stmt.setString(2, password);
 
             rs = stmt.executeQuery();
             logger.info("login: " + username);
             if (rs.next()) {
 
-                type="escort";
-                id= rs.getInt(1);
-                response ="" + id + "," + type;
+                type = "escort";
+                id = rs.getInt(1);
+                response = "" + id + "," + type;
 
-            }
-            else{
-                response =loginAgency(username, password);
+            } else {
+                response = loginAgency(username, password);
 
             }
         } catch (SQLException ex) {
@@ -89,31 +85,30 @@ String response ="";
         return response;
 
 
-
     }
-    public static String loginAgency(String username, String password){
+
+    public static String loginAgency(String username, String password) {
 
         String type = "";
         PreparedStatement stmt;
         int id = 0;
         ResultSet rs;
-        String response ="";
+        String response = "";
         try {
 
             stmt = conn.prepareStatement("SELECT id FROM massage_agency WHERE username = ? AND password = ?");
-            stmt.setString(1,username);
-            stmt.setString(2,password);
+            stmt.setString(1, username);
+            stmt.setString(2, password);
 
             rs = stmt.executeQuery();
             logger.info("login: " + username);
             if (rs.next()) {
 
-                type="agency";
-                id= rs.getInt(1);
+                type = "agency";
+                id = rs.getInt(1);
                 response = "" + id + "," + type;
 
-            }
-            else{
+            } else {
                 response = loginAdvertiser(username, password);
 
             }
@@ -129,29 +124,28 @@ String response ="";
         return response;
 
 
-
     }
 
-    public static String loginAdvertiser(String username, String password){
+    public static String loginAdvertiser(String username, String password) {
 
         String type = "";
         PreparedStatement stmt;
         int id = 0;
         ResultSet rs;
-        String response ="";
+        String response = "";
         try {
 
             stmt = conn.prepareStatement("SELECT id FROM advertisers WHERE email = ? AND password = ?");
-            stmt.setString(1,username);
-            stmt.setString(2,password);
+            stmt.setString(1, username);
+            stmt.setString(2, password);
 
             rs = stmt.executeQuery();
             logger.info("login: " + username);
             if (rs.next()) {
 
-                type="advertiser";
-                id= rs.getInt(1);
-                response ="" + id + "," + type;
+                type = "advertiser";
+                id = rs.getInt(1);
+                response = "" + id + "," + type;
             }
 
         } catch (SQLException ex) {

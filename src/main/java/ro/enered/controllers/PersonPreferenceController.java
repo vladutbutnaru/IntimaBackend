@@ -1,7 +1,6 @@
 package ro.enered.controllers;
 
 import ro.enered.entities.PersonPreference;
-import ro.enered.entities.PersonProperty;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
  */
 public class PersonPreferenceController extends AbstractController {
 
-    public static ArrayList<PersonPreference> getPreferencesForEscort(int id){
+    public static ArrayList<PersonPreference> getPreferencesForEscort(int id) {
         ArrayList<PersonPreference> preferences = new ArrayList<PersonPreference>();
         PreparedStatement stmt;
         ResultSet rs;
@@ -22,11 +21,11 @@ public class PersonPreferenceController extends AbstractController {
 
             stmt = conn.prepareStatement("SELECT * FROM person_has_preference WHERE person_id = ?");
 
-            stmt.setInt(1,id);
+            stmt.setInt(1, id);
             rs = stmt.executeQuery();
 
             while (rs.next()) {
-               PersonPreference pf = getById(rs.getInt(4));
+                PersonPreference pf = getById(rs.getInt(4));
                 pf.setValue(rs.getString(2));
                 pf.setId(rs.getInt("person_preference_id"));
                 preferences.add(pf);
@@ -46,7 +45,7 @@ public class PersonPreferenceController extends AbstractController {
 
     }
 
-    public static ArrayList<PersonPreference> getAllPreferences(){
+    public static ArrayList<PersonPreference> getAllPreferences() {
         ArrayList<PersonPreference> preferences = new ArrayList<PersonPreference>();
         PreparedStatement stmt;
         ResultSet rs;
@@ -79,11 +78,7 @@ public class PersonPreferenceController extends AbstractController {
     }
 
 
-
-
-
-
-    public static PersonPreference getById(int id){
+    public static PersonPreference getById(int id) {
         PersonPreference pf = new PersonPreference();
 
         PreparedStatement stmt;
@@ -93,7 +88,7 @@ public class PersonPreferenceController extends AbstractController {
 
             stmt = conn.prepareStatement("SELECT * FROM person_preferences WHERE id = ?");
 
-            stmt.setInt(1,id);
+            stmt.setInt(1, id);
             rs = stmt.executeQuery();
 
             if (rs.next()) {
@@ -111,14 +106,14 @@ public class PersonPreferenceController extends AbstractController {
         return pf;
 
 
-
     }
-    public static void updateP(int id,String v){
+
+    public static void updateP(int id, String v) {
         PreparedStatement pst;
         try {
-            pst=conn.prepareStatement("update person_has_preference set value=? where id=?");
-            pst.setString(1,v);
-            pst.setInt(2,id);
+            pst = conn.prepareStatement("update person_has_preference set value=? where id=?");
+            pst.setString(1, v);
+            pst.setInt(2, id);
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

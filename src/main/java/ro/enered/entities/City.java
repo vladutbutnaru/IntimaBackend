@@ -1,8 +1,6 @@
 package ro.enered.entities;
 
 
-
-
 public class City {
     private int id;
 
@@ -12,9 +10,6 @@ public class City {
 
     private Country country;
 
-
-
-   
 
     public int getId() {
         return id;

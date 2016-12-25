@@ -1,7 +1,6 @@
 package ro.enered.controllers;
 
 import ro.enered.entities.Advertiser;
-import ro.enered.entities.MassageAgency;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -9,15 +8,15 @@ import java.sql.SQLException;
 /**
  * Created by macbook on 18/12/2016.
  */
-public class AdvertiserController extends AbstractController{
+public class AdvertiserController extends AbstractController {
 
-    public static void registerAdvertiser(Advertiser m){
+    public static void registerAdvertiser(Advertiser m) {
         PreparedStatement stmt;
         try {
 
             stmt = conn.prepareStatement("INSERT INTO advertisers(email,password) VALUES ?,?");
-            stmt.setString(1,m.getEmail());
-            stmt.setString(2,m.getPassword());
+            stmt.setString(1, m.getEmail());
+            stmt.setString(2, m.getPassword());
 
 
             stmt.executeUpdate();

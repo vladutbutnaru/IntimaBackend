@@ -1,6 +1,5 @@
 package ro.enered.controllers;
 
-import ro.enered.entities.EscortPhoto;
 import ro.enered.entities.EscortReview;
 
 import java.sql.PreparedStatement;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
  */
 public class EscortReviewController extends AbstractController {
 
-    public static ArrayList<EscortReview> getEscortReviews(int id){
+    public static ArrayList<EscortReview> getEscortReviews(int id) {
         ArrayList<EscortReview> reviews = new ArrayList<EscortReview>();
         PreparedStatement stmt;
         ResultSet rs;
@@ -27,8 +26,8 @@ public class EscortReviewController extends AbstractController {
             rs = stmt.executeQuery();
 
             while (rs.next()) {
-               EscortReview er = new EscortReview();
-              er.setContent(rs.getString(2));
+                EscortReview er = new EscortReview();
+                er.setContent(rs.getString(2));
                 er.setCreatedAt(rs.getTimestamp(4));
                 er.setMember(MemberController.getById(rs.getInt(6)));
                 er.setMeetingDate(rs.getTimestamp(7));
@@ -52,9 +51,6 @@ public class EscortReviewController extends AbstractController {
 
         }
         return reviews;
-
-
-
 
 
     }

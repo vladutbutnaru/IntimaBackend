@@ -34,6 +34,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/auth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
         <url-pattern>/admin/blog/article/edit</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
@@ -55,6 +59,24 @@
         <url-pattern>/admin/blog/quiz/new</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/result/new</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/answer/new</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/result/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/blog/answer/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+
         <servlet-name>Admin</servlet-name>
         <url-pattern>/admin/blog/quiz/edit</url-pattern>
     </servlet-mapping>

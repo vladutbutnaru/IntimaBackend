@@ -1,7 +1,6 @@
 package ro.enered.controllers;
 
 import ro.enered.entities.MassageAgency;
-import ro.enered.entities.Member;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -11,15 +10,15 @@ import java.sql.SQLException;
  */
 public class MassageAgencyController extends AbstractController {
 
-    public static void registerAgency(MassageAgency m){
+    public static void registerAgency(MassageAgency m) {
         PreparedStatement stmt;
         try {
 
             stmt = conn.prepareStatement("INSERT INTO massage_agency(email,username,password,city) VALUES ?,?,?,?");
-            stmt.setString(1,m.getEmail());
-            stmt.setString(3,m.getPassword());
-            stmt.setString(2,m.getUser());
-            stmt.setInt(4,m.getCity().getId());
+            stmt.setString(1, m.getEmail());
+            stmt.setString(3, m.getPassword());
+            stmt.setString(2, m.getUser());
+            stmt.setInt(4, m.getCity().getId());
 
 
             stmt.executeUpdate();

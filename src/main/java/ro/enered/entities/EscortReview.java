@@ -12,7 +12,7 @@ public class EscortReview {
     private Timestamp createdAt;
     private Escort escort;
     private Member member;
-    private  Timestamp meetingDate;
+    private Timestamp meetingDate;
     private int duration;
     private City city;
     private int look;

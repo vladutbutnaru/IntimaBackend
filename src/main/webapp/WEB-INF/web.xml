@@ -34,6 +34,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/auth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
         <url-pattern>/admin/blog/article/edit</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
@@ -100,6 +104,10 @@
     <servlet-mapping>
         <servlet-name>Blog</servlet-name>
         <url-pattern>/blog/test/finished</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/article/vote</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Escorts</servlet-name>

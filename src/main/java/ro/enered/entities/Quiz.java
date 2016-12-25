@@ -10,7 +10,7 @@ public class Quiz {
     private ArrayList<BlogQuizResult> quizresult;
     private ArrayList<BlogQuizAnswer> quizans;
     private ArrayList<BlogQuizQuestion> bqq;
-    private  ArrayList<BlogTest> tests;
+    private ArrayList<BlogTest> tests;
 
     public ArrayList<BlogTest> getTests() {
         return tests;

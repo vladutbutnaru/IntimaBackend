@@ -1,6 +1,5 @@
 package ro.enered.controllers;
 
-import ro.enered.entities.BlogQuizQuestion;
 import ro.enered.entities.BlogQuizResult;
 
 import java.sql.PreparedStatement;
@@ -11,13 +10,13 @@ import java.util.ArrayList;
 /**
  * Created by macbook on 22/12/2016.
  */
-public class BlogQuizResultController extends AbstractController{
+public class BlogQuizResultController extends AbstractController {
 
-    public static ArrayList<BlogQuizResult> getResultsForQuiz(String ids){
+    public static ArrayList<BlogQuizResult> getResultsForQuiz(String ids) {
 
         ArrayList<BlogQuizResult> results = new ArrayList<BlogQuizResult>();
 
-        for(String id : ids.split(",")){
+        for (String id : ids.split(",")) {
 
             PreparedStatement stmt;
 
@@ -50,94 +49,79 @@ public class BlogQuizResultController extends AbstractController{
             }
 
 
-
-
-
-
         }
-
 
 
         return results;
 
     }
-    public static ArrayList<BlogQuizResult> getAll(){
+
+    public static ArrayList<BlogQuizResult> getAll() {
 
         ArrayList<BlogQuizResult> results = new ArrayList<BlogQuizResult>();
 
 
+        PreparedStatement stmt;
 
-            PreparedStatement stmt;
+        ResultSet rs;
 
-            ResultSet rs;
+        try {
+            //get all tests
+            stmt = conn.prepareStatement("SELECT * FROM blog_quiz_results");
 
-            try {
-                //get all tests
-                stmt = conn.prepareStatement("SELECT * FROM blog_quiz_results");
+            rs = stmt.executeQuery();
 
-                rs = stmt.executeQuery();
-
-                while (rs.next()) {
-                    BlogQuizResult result = new BlogQuizResult();
-                    result.setId(rs.getInt(1));
-                    result.setTitle(rs.getString(2));
-                    result.setMin(rs.getInt(3));
-                    result.setMax(rs.getInt(4));
-                    result.setContent(rs.getString(5));
-                    results.add(result);
-
-                }
-
-            } catch (SQLException ex) {
-                // handle any errors
-                System.out.println("SQLException: " + ex.getMessage());
-                System.out.println("SQLState: " + ex.getSQLState());
-                System.out.println("VendorError: " + ex.getErrorCode());
-                logger.error(ex.getMessage());
+            while (rs.next()) {
+                BlogQuizResult result = new BlogQuizResult();
+                result.setId(rs.getInt(1));
+                result.setTitle(rs.getString(2));
+                result.setMin(rs.getInt(3));
+                result.setMax(rs.getInt(4));
+                result.setContent(rs.getString(5));
+                results.add(result);
 
             }
 
+        } catch (SQLException ex) {
+            // handle any errors
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            logger.error(ex.getMessage());
 
-
-
-
-
-
-
+        }
 
 
         return results;
 
     }
-    public static void AddNew(String t, int mi, int ma, String content){
+
+    public static void AddNew(String t, int mi, int ma, String content) {
         PreparedStatement pst;
         try {
-            pst= conn.prepareStatement("INSERT INTO blog_quiz_results(title,mi,ma,content)  VALUES (?,?,?,?)");
-             pst.setString(1, t);
-            pst.setInt(2,mi);
-            pst.setInt(3,ma);
-            pst.setString(4,content);
-            pst.executeQuery();
-
-
+            pst = conn.prepareStatement("INSERT INTO blog_quiz_results(`title`,`min`,`max`,`content`)  VALUES (?,?,?,?)");
+            pst.setString(1, t);
+            pst.setInt(2, mi);
+            pst.setInt(3, ma);
+            pst.setString(4, content);
+            pst.executeUpdate();
 
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    public static void Update(String t, int mi, int ma, String content,int id){
+
+    public static void Update(String t, int mi, int ma, String content, int id) {
         PreparedStatement pst;
         try {
-            pst= conn.prepareStatement("UPDATE blog_quiz_results SET title=?,mi=?,ma=?,content=? where id=?");
+            pst = conn.prepareStatement("UPDATE blog_quiz_results SET `title`=?,`min`=?,`max`=?,`content`=? where `id`=?");
             pst.setString(1, t);
-            pst.setInt(2,mi);
-            pst.setInt(3,ma);
-            pst.setString(4,content);
-            pst.setInt(5,id);
+            pst.setInt(2, mi);
+            pst.setInt(3, ma);
+            pst.setString(4, content);
+            pst.setInt(5, id);
             pst.executeUpdate();
-
-
 
 
         } catch (SQLException e) {

@@ -1,7 +1,6 @@
 package ro.enered.controllers;
 
 import ro.enered.entities.Escort;
-import ro.enered.entities.EscortPrice;
 import ro.enered.entities.EscortSchedule;
 
 import java.sql.PreparedStatement;
@@ -27,7 +26,7 @@ public class EscortScheduleController extends AbstractController {
             rs = stmt.executeQuery();
 
             while (rs.next()) {
-              EscortSchedule es = new EscortSchedule();
+                EscortSchedule es = new EscortSchedule();
                 es.setMonday(rs.getString(3));
                 es.setTuesday(rs.getString(4));
                 es.setWednesday(rs.getString(5));
@@ -50,18 +49,19 @@ public class EscortScheduleController extends AbstractController {
         return schedules;
 
     }
-    public static void updateProgram(int id,String lun, String mar, String mie,String joi,String vin,String sam,String dum){
+
+    public static void updateProgram(int id, String lun, String mar, String mie, String joi, String vin, String sam, String dum) {
         PreparedStatement pst;
         try {
-            pst=conn.prepareStatement("UPDATE escort_schedule SET monday=?,tuesday=?,wednesday=?,thursday=?,friday=?,saturday=?,sunday=? WHERE escort_id=?");
-            pst.setString(1,lun);
-            pst.setString(2,mar);
-            pst.setString(3,mie);
-            pst.setString(4,joi);
-            pst.setString(5,vin);
-            pst.setString(6,sam);
-            pst.setString(7,dum);
-            pst.setInt(8,id);
+            pst = conn.prepareStatement("UPDATE escort_schedule SET monday=?,tuesday=?,wednesday=?,thursday=?,friday=?,saturday=?,sunday=? WHERE escort_id=?");
+            pst.setString(1, lun);
+            pst.setString(2, mar);
+            pst.setString(3, mie);
+            pst.setString(4, joi);
+            pst.setString(5, vin);
+            pst.setString(6, sam);
+            pst.setString(7, dum);
+            pst.setInt(8, id);
             pst.executeUpdate();
 
         } catch (SQLException e) {

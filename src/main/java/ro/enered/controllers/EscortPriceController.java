@@ -1,7 +1,6 @@
 package ro.enered.controllers;
 
 import ro.enered.entities.Escort;
-import ro.enered.entities.EscortPhoto;
 import ro.enered.entities.EscortPrice;
 
 import java.sql.PreparedStatement;
@@ -12,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by macbook on 30/11/2016.
  */
-public class EscortPriceController  extends AbstractController{
+public class EscortPriceController extends AbstractController {
 
     public static ArrayList<EscortPrice> getPricesForEscort(Escort e) {
         PreparedStatement stmt;
@@ -47,12 +46,13 @@ public class EscortPriceController  extends AbstractController{
         return prices;
 
     }
-    public static void updateP(int id,String v){
+
+    public static void updateP(int id, String v) {
         PreparedStatement pst;
         try {
-            pst=conn.prepareStatement("update escort_prices set price=? where id=?");
-            pst.setInt(1,Integer.parseInt(v));
-            pst.setInt(2,id);
+            pst = conn.prepareStatement("update escort_prices set price=? where id=?");
+            pst.setInt(1, Integer.parseInt(v));
+            pst.setInt(2, id);
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -39,7 +39,8 @@ public class CityController extends AbstractController {
         return c;
 
     }
-    public static City getByName(String name){
+
+    public static City getByName(String name) {
         PreparedStatement stmt;
         ResultSet rs;
 
@@ -66,9 +67,6 @@ public class CityController extends AbstractController {
 
         }
         return c;
-
-
-
 
 
     }

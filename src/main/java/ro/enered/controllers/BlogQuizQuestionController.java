@@ -1,7 +1,6 @@
 package ro.enered.controllers;
 
 import ro.enered.entities.BlogQuizQuestion;
-import ro.enered.entities.BlogTest;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,11 +10,11 @@ import java.util.ArrayList;
 /**
  * Created by macbook on 22/12/2016.
  */
-public class BlogQuizQuestionController extends AbstractController{
+public class BlogQuizQuestionController extends AbstractController {
 
-    public static ArrayList<BlogQuizQuestion> getQuestionsForQuiz(String questionIDs){
+    public static ArrayList<BlogQuizQuestion> getQuestionsForQuiz(String questionIDs) {
         ArrayList<BlogQuizQuestion> questions = new ArrayList<BlogQuizQuestion>();
-        for(String id : questionIDs.split(",")){
+        for (String id : questionIDs.split(",")) {
 
             PreparedStatement stmt;
 
@@ -25,46 +24,6 @@ public class BlogQuizQuestionController extends AbstractController{
                 //get all tests
                 stmt = conn.prepareStatement("SELECT * FROM blog_quiz_question WHERE id = ? ");
                 stmt.setInt(1, Integer.parseInt(id));
-                rs = stmt.executeQuery();
-
-                while (rs.next()) {
-                   BlogQuizQuestion question = new BlogQuizQuestion();
-                    question.setId(rs.getInt(1));
-                    question.setTitle(rs.getString(2));
-                    question.setAnswers(BlogQuizAnswerController.getAnswersForQuestion(rs.getString(3)));
-
-                    questions.add(question);
-
-                }
-
-            } catch (SQLException ex) {
-                // handle any errors
-                System.out.println("SQLException: " + ex.getMessage());
-                System.out.println("SQLState: " + ex.getSQLState());
-                System.out.println("VendorError: " + ex.getErrorCode());
-                logger.error(ex.getMessage());
-
-            }
-
-
-
-
-
-
-        }
-
-
-
-        return questions;
-
-    }
-    public static ArrayList<BlogQuizQuestion> getAll(){
-        ArrayList<BlogQuizQuestion> questions = new ArrayList<BlogQuizQuestion>();
-            PreparedStatement stmt;
-            ResultSet rs;
-            try {
-                //get all tests
-                stmt = conn.prepareStatement("SELECT * FROM blog_quiz_question");
                 rs = stmt.executeQuery();
 
                 while (rs.next()) {
@@ -85,29 +44,67 @@ public class BlogQuizQuestionController extends AbstractController{
                 logger.error(ex.getMessage());
 
             }
+
+
+        }
+
+
         return questions;
 
     }
-    public static void addNew(String t, String a){
+
+    public static ArrayList<BlogQuizQuestion> getAll() {
+        ArrayList<BlogQuizQuestion> questions = new ArrayList<BlogQuizQuestion>();
+        PreparedStatement stmt;
+        ResultSet rs;
+        try {
+            //get all tests
+            stmt = conn.prepareStatement("SELECT * FROM blog_quiz_question");
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                BlogQuizQuestion question = new BlogQuizQuestion();
+                question.setId(rs.getInt(1));
+                question.setTitle(rs.getString(2));
+                question.setAnswers(BlogQuizAnswerController.getAnswersForQuestion(rs.getString(3)));
+
+                questions.add(question);
+
+            }
+
+        } catch (SQLException ex) {
+            // handle any errors
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            logger.error(ex.getMessage());
+
+        }
+        return questions;
+
+    }
+
+    public static void addNew(String t, String a) {
         PreparedStatement pst;
         try {
-            pst=conn.prepareStatement("INSERT  INTO blog_quiz_question(title,answers) VALUES (?,?)");
-            pst.setString(1,t);
-            pst.setString(2,a);
-            pst.executeQuery();
+            pst = conn.prepareStatement("INSERT  INTO blog_quiz_question(title,answers) VALUES (?,?)");
+            pst.setString(1, t);
+            pst.setString(2, a);
+            pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
 
     }
-    public static void update(int id, String t,String cont){
+
+    public static void update(int id, String t, String cont) {
         PreparedStatement pst;
         try {
-            pst=conn.prepareStatement("update blog_quiz_question set title=?,answers=? WHERE id=?");
-            pst.setInt(1,id);
-            pst.setString(2,t);
-            pst.setString(3,cont);
+            pst = conn.prepareStatement("update blog_quiz_question set title=?,answers=? WHERE id=?");
+            pst.setString(1, t);
+            pst.setString(2, cont);
+            pst.setInt(3, id);
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
