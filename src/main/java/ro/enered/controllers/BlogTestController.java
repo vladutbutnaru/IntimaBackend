@@ -35,6 +35,20 @@ public class BlogTestController extends AbstractController {
                 test.setPublisher(AdminController.getById(rs.getInt(5)));
                 test.setImage(rs.getString(6));
                 test.setQuiz(BlogQuizController.getById(rs.getInt(7)));
+                test.setTitle_eng(rs.getString(7));
+                test.setTitle_de(rs.getString(8));
+                test.setTitle_fr(rs.getString(9));
+                test.setTitle_it(rs.getString(10));
+                test.setTitle_ru(rs.getString(11));
+                test.setTitle_es(rs.getString(12));
+                test.setTitle_pr(rs.getString(13));
+                test.setContent_eng(rs.getString(14));
+                test.setContent_de(rs.getString(15));
+                test.setContent_fr(rs.getString(16));
+                test.setContent_it(rs.getString(17));
+                test.setContent_ru(rs.getString(18));
+                test.setContent_es(rs.getString(19));
+                test.setContent_pr(rs.getString(20));
                 tests.add(test);
             }
 
@@ -73,6 +87,20 @@ public class BlogTestController extends AbstractController {
                 test.setPublisher(AdminController.getById(rs.getInt(5)));
                 test.setImage(rs.getString(6));
                 test.setQuiz(BlogQuizController.getById(rs.getInt(7)));
+                test.setTitle_eng(rs.getString(7));
+                test.setTitle_de(rs.getString(8));
+                test.setTitle_fr(rs.getString(9));
+                test.setTitle_it(rs.getString(10));
+                test.setTitle_ru(rs.getString(11));
+                test.setTitle_es(rs.getString(12));
+                test.setTitle_pr(rs.getString(13));
+                test.setContent_eng(rs.getString(14));
+                test.setContent_de(rs.getString(15));
+                test.setContent_fr(rs.getString(16));
+                test.setContent_it(rs.getString(17));
+                test.setContent_ru(rs.getString(18));
+                test.setContent_es(rs.getString(19));
+                test.setContent_pr(rs.getString(20));
 
             }
 
@@ -108,17 +136,103 @@ public class BlogTestController extends AbstractController {
         }
     }
 
-    public static void update(String title, String content, String image, int id) {
+    public static void update(String title, String content, String image, int id,int lang) {
         PreparedStatement pst;
-        try {
-            pst = conn.prepareStatement("update blog_tests SET title=?,content=?,image=? where id=?");
-            pst.setString(1, title);
-            pst.setString(2, content);
-            pst.setString(3, image);
-            pst.setInt(4, id);
-            pst.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if(lang==1) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title=?,content=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==2) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title_en=?,content_en=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==3) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title_de=?,content_de=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==4) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title_fr=?,content_fr=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==5) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title_it=?,content_it=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==6) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title_ru=?,content_rus=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==7) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title_es=?,content_es=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==8) {
+            try {
+                pst = conn.prepareStatement("update blog_tests SET title_pr=?,content_pr=?,image=? where id=?");
+                pst.setString(1, title);
+                pst.setString(2, content);
+                pst.setString(3, image);
+                pst.setInt(4, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
     }

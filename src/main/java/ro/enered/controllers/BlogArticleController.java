@@ -43,6 +43,21 @@ public class BlogArticleController extends AbstractController {
                 a.setContent(rs.getString(7));
                 a.setVotes(rs.getInt(9));
                 a.setBlogVotes(BlogVoteController.getVotesForArticle(a.getId()));
+                a.setTitle_de(rs.getString(11));
+                a.setTitle_eng(rs.getString(10));
+                a.setTitle_fr(rs.getString(12));
+                a.setTitle_it(rs.getString(13));
+                a.setTitle_ru(rs.getString(14));
+                a.setTitle_es(rs.getString(15));
+                a.setTitle_pr(rs.getString(16));
+                a.setContent_de(rs.getString(18));
+                a.setContent_eng(rs.getString(17));
+                a.setContent_fr(rs.getString(19));
+                a.setContent_it(rs.getString(20));
+                a.setContent_ru(rs.getString(21));
+                a.setContent_es(rs.getString(22));
+                a.setContent_pr(rs.getString(23));
+
                 articles.add(a);
 
             }
@@ -88,7 +103,20 @@ public class BlogArticleController extends AbstractController {
                 a.setImages(rs.getString(8));
                 a.setVotes(rs.getInt(9));
                 a.setBlogVotes(BlogVoteController.getVotesForArticle(a.getId()));
-
+                a.setTitle_de(rs.getString(11));
+                a.setTitle_eng(rs.getString(10));
+                a.setTitle_fr(rs.getString(12));
+                a.setTitle_it(rs.getString(13));
+                a.setTitle_ru(rs.getString(14));
+                a.setTitle_es(rs.getString(15));
+                a.setTitle_pr(rs.getString(16));
+                a.setContent_de(rs.getString(18));
+                a.setContent_eng(rs.getString(17));
+                a.setContent_fr(rs.getString(19));
+                a.setContent_it(rs.getString(20));
+                a.setContent_ru(rs.getString(21));
+                a.setContent_es(rs.getString(22));
+                a.setContent_pr(rs.getString(23));
 
             }
 
@@ -109,7 +137,7 @@ public class BlogArticleController extends AbstractController {
     public static void addNew(String title, int categ, String poza, String continut, int id_u) {
         PreparedStatement pst;
         try {
-            pst = conn.prepareStatement("INSERT into blog_articles(category,title,publisher_id,featured_image,published_date,content,images,votes) values(?,?,?,?,?,?,?,?)");
+            pst = conn.prepareStatement("INSERT into blog_articles(category,title,publisher_id,featured_image,published_date,content,images,votes,title_en, title_de, title_fr, title_it, title_rus, title_es, title_pr, content_en, content_de, content_fr, content_it, content_rus, content_es, content_pr) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             pst.setInt(1, categ);
             pst.setString(2, title);
             pst.setInt(3, id_u);
@@ -119,25 +147,134 @@ public class BlogArticleController extends AbstractController {
             pst.setString(6, continut);
             pst.setString(7, "");
             pst.setInt(8, 0);
+            pst.setString(9," ");
+            pst.setString(10," ");
+            pst.setString(11," ");
+            pst.setString(12," ");
+            pst.setString(13," ");
+            pst.setString(14," ");
+            pst.setString(15," ");
+            pst.setString(16," ");
+            pst.setString(17," ");
+            pst.setString(18," ");
+            pst.setString(19," ");
+            pst.setString(20," ");
+            pst.setString(21," ");
+            pst.setString(22," ");
+
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public static void updateArt(String title, int categ, String poza, String continut, int id) {
+    public static void updateArt(String title, int categ, String poza, String continut, int id,int lang) {
         PreparedStatement pst;
-        try {
-            pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title=?,featured_image=?,content=? where id=?");
-            pst.setInt(1, categ);
-            pst.setString(2, title);
-            pst.setString(3, poza);
-            pst.setString(4, continut);
-            pst.setInt(5, id);
-            pst.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if(lang==1) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title=?,featured_image=?,content=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
+        if(lang==2) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_en=?,featured_image=?,content_en=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==3) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_de=?,featured_image=?,content_de=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==4) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_fr=?,featured_image=?,content_fr=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==5) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_it=?,featured_image=?,content_it=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==6) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category_rus=?,title=?,featured_image=?,content_rus=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==7) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_es=?,featured_image=?,content_es=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==8) {
+            try {
+                pst = conn.prepareStatement("UPDATE blog_articles SET category_pr=?,title=?,featured_image=?,content_pr=? where id=?");
+                pst.setInt(1, categ);
+                pst.setString(2, title);
+                pst.setString(3, poza);
+                pst.setString(4, continut);
+                pst.setInt(5, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public static void deleteArt(int id) {

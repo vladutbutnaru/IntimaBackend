@@ -31,6 +31,13 @@ public class BlogQuizQuestionController extends AbstractController {
                     question.setId(rs.getInt(1));
                     question.setTitle(rs.getString(2));
                     question.setAnswers(BlogQuizAnswerController.getAnswersForQuestion(rs.getString(3)));
+                    question.setTitle_eng(rs.getString(5));
+                    question.setTitle_de(rs.getString(6));
+                    question.setTitle_fr(rs.getString(7));
+                    question.setTitle_it(rs.getString(8));
+                    question.setTitle_ru(rs.getString(9));
+                    question.setTitle_es(rs.getString(10));
+                    question.setTitle_pr(rs.getString(11));
 
                     questions.add(question);
 
@@ -67,7 +74,13 @@ public class BlogQuizQuestionController extends AbstractController {
                 question.setId(rs.getInt(1));
                 question.setTitle(rs.getString(2));
                 question.setAnswers(BlogQuizAnswerController.getAnswersForQuestion(rs.getString(3)));
-
+                question.setTitle_eng(rs.getString(5));
+                question.setTitle_de(rs.getString(6));
+                question.setTitle_fr(rs.getString(7));
+                question.setTitle_it(rs.getString(8));
+                question.setTitle_ru(rs.getString(9));
+                question.setTitle_es(rs.getString(10));
+                question.setTitle_pr(rs.getString(11));
                 questions.add(question);
 
             }
@@ -98,16 +111,95 @@ public class BlogQuizQuestionController extends AbstractController {
 
     }
 
-    public static void update(int id, String t, String cont) {
+    public static void update(int id, String t, String cont,int lang) {
         PreparedStatement pst;
-        try {
-            pst = conn.prepareStatement("update blog_quiz_question set title=?,answers=? WHERE id=?");
-            pst.setString(1, t);
-            pst.setString(2, cont);
-            pst.setInt(3, id);
-            pst.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if(lang==1) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==2) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title_en=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==3) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title_de=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==4) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title_fr=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==5) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title_it=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==6) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title_ru=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==7) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title_es=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(lang==8) {
+            try {
+                pst = conn.prepareStatement("update blog_quiz_question set title_pr=?,answers=? WHERE id=?");
+                pst.setString(1, t);
+                pst.setString(2, cont);
+                pst.setInt(3, id);
+                pst.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
     }

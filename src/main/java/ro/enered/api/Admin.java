@@ -50,7 +50,7 @@ public class Admin extends HttpServlet {
             BlogTestController btc = new BlogTestController();
             if (request.getParameter("id") != "") {
                 bqc.update(Integer.parseInt(request.getParameter("id")), request.getParameter("intrebari"), request.getParameter("rezultat"));
-                btc.update(request.getParameter("title"), request.getParameter("continut"), request.getParameter("poza"), Integer.parseInt(request.getParameter("id")));
+                btc.update(request.getParameter("title"), request.getParameter("continut"), request.getParameter("poza"), Integer.parseInt(request.getParameter("id")),Integer.parseInt(request.getParameter("lang")));
                 System.out.println();
             } else {
                 int id = bqc.addN(request.getParameter("intrebari"), request.getParameter("rezultat"));
@@ -63,7 +63,7 @@ public class Admin extends HttpServlet {
         if (path.equals(ANSWER)) {
             BlogQuizAnswerController bqa = new BlogQuizAnswerController();
             if (request.getParameter("id") != "") {
-                bqa.update(Integer.parseInt(request.getParameter("id")), request.getParameter("title"), Integer.parseInt(request.getParameter("answers")));
+                bqa.update(Integer.parseInt(request.getParameter("id")), request.getParameter("title"), Integer.parseInt(request.getParameter("answers")),Integer.parseInt(request.getParameter("lang")));
             } else {
 
                 bqa.addN(request.getParameter("title"), Integer.parseInt(request.getParameter("answers")));
@@ -72,7 +72,7 @@ public class Admin extends HttpServlet {
         if (path.equals(RESULT)) {
             if (request.getParameter("id") != "") {
                 BlogQuizResultController bqr = new BlogQuizResultController();
-                bqr.Update(request.getParameter("title"), Integer.parseInt(request.getParameter("minim")), Integer.parseInt(request.getParameter("maxim")), request.getParameter("content"), Integer.parseInt(request.getParameter("id")));
+                bqr.Update(request.getParameter("title"), Integer.parseInt(request.getParameter("minim")), Integer.parseInt(request.getParameter("maxim")), request.getParameter("content"), Integer.parseInt(request.getParameter("id")),Integer.parseInt(request.getParameter("lang")));
 
             } else {
                 BlogQuizResultController bqr = new BlogQuizResultController();
@@ -84,7 +84,7 @@ public class Admin extends HttpServlet {
 
             BlogQuizQuestionController bqq = new BlogQuizQuestionController();
             if (request.getParameter("id") != "") {
-                bqq.update(Integer.parseInt(request.getParameter("id")), request.getParameter("title"), request.getParameter("answers"));
+                bqq.update(Integer.parseInt(request.getParameter("id")), request.getParameter("title"), request.getParameter("answers"),Integer.parseInt(request.getParameter("lang")));
 
             } else {
                 bqq.addNew(request.getParameter("title"), request.getParameter("answers"));
@@ -104,7 +104,8 @@ public class Admin extends HttpServlet {
         if (path.equals(ARTICLE_EDIT)) {
             BlogArticleController bac = new BlogArticleController();
             if (request.getParameter("id") != "") {
-                bac.updateArt(request.getParameter("title"), Integer.parseInt(request.getParameter("category")), request.getParameter("poza"), request.getParameter("continut"), Integer.parseInt(request.getParameter("id")));
+                System.out.println(request.getParameter("lang"));
+                bac.updateArt(request.getParameter("title"), Integer.parseInt(request.getParameter("category")), request.getParameter("poza"), request.getParameter("continut"), Integer.parseInt(request.getParameter("id")),Integer.parseInt(request.getParameter("lang")));
             } else {
                 bac.addNew(request.getParameter("title"), Integer.parseInt(request.getParameter("category")), request.getParameter("poza"), request.getParameter("continut"), 1);
             }
