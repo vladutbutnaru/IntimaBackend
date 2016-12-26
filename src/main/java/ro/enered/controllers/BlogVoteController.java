@@ -19,7 +19,7 @@ public class BlogVoteController extends AbstractController {
         ResultSet rs;
         try {
 
-            stmt = conn.prepareStatement("SELECT * FROM blog_votes WHERE article = ? ");
+            stmt = conn.prepareStatement("SELECT * FROM blog_votes WHERE vote_article = ? ");
             stmt.setInt(1, articleId);
 
             rs = stmt.executeQuery();
@@ -27,8 +27,8 @@ public class BlogVoteController extends AbstractController {
             while (rs.next()) {
                 BlogVote vote = new BlogVote();
                 vote.setId(rs.getInt(1));
-                vote.setArticle(BlogArticleController.getById(rs.getInt(2)));
-                vote.setIp(rs.getString(3));
+                //vote.setArticle(BlogArticleController.getById(rs.getInt(3)));
+                vote.setIp(rs.getString(2));
                 votes.add(vote);
 
 
@@ -57,7 +57,7 @@ public class BlogVoteController extends AbstractController {
             stmt.setString(1, ip);
             stmt.setInt(2, articleId);
             stmt.executeUpdate();
-
+            BlogArticleController.voteArticle(articleId);
 
         } catch (SQLException ex) {
             // handle any errors

@@ -7,17 +7,26 @@ import ro.enered.controllers.BlogVoteController;
 import ro.enered.entities.BlogArticle;
 import ro.enered.entities.BlogQuizResult;
 import ro.enered.entities.BlogTest;
+import ro.enered.entities.FileMeta;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by macbook on 21/12/2016.
  */
+@MultipartConfig
 public class Blog extends HttpServlet {
     private static final String ARTICLES = "/blog/articles";
     private static final String ARTICLE = "/blog/article";
@@ -26,7 +35,10 @@ public class Blog extends HttpServlet {
     private static final String TEST = "/blog/test";
     private static final String VOTE = "/blog/article/vote";
     private static final String FINISHED = "/blog/test/finished";
+    private static final String UPLOADFILE = "/blog/upload";
 
+    // this will store uploaded files
+    private static List<FileMeta> files = new LinkedList<FileMeta>();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
@@ -110,5 +122,6 @@ public class Blog extends HttpServlet {
 
 
         }
+
     }
 }

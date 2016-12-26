@@ -151,4 +151,17 @@ public class BlogArticleController extends AbstractController {
             e.printStackTrace();
         }
     }
+    public static void voteArticle(int id){
+        PreparedStatement pst;
+        try {
+            pst = conn.prepareStatement("UPDATE blog_articles SET votes = votes+1 where id=?");
+            pst.setInt(1, id);
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 }
