@@ -1,9 +1,7 @@
 package ro.enered.api;
 
 import com.google.gson.Gson;
-import ro.enered.controllers.BlogArticleController;
-import ro.enered.controllers.BlogTestController;
-import ro.enered.controllers.BlogVoteController;
+import ro.enered.controllers.*;
 import ro.enered.entities.BlogArticle;
 import ro.enered.entities.BlogQuizResult;
 import ro.enered.entities.BlogTest;
@@ -17,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Paths;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 /**
  * Created by macbook on 21/12/2016.
@@ -36,6 +34,8 @@ public class Blog extends HttpServlet {
     private static final String VOTE = "/blog/article/vote";
     private static final String FINISHED = "/blog/test/finished";
     private static final String UPLOADFILE = "/blog/upload";
+    private static final String NEWSLETTER = "/blog/newsletter";
+    private static final String CONTACT = "/blog/contact";
 
     // this will store uploaded files
     private static List<FileMeta> files = new LinkedList<FileMeta>();
@@ -119,6 +119,16 @@ public class Blog extends HttpServlet {
             String ip = request.getParameter("ip");
             int articleId = Integer.parseInt(request.getParameter("article"));
             BlogVoteController.vote(ip, articleId);
+
+
+        }
+        if(path.equals(NEWSLETTER)){
+            BlogNewsletterController.insertNewsletter(request.getParameter("email"));
+
+
+        }
+        if(path.equals(CONTACT)){
+            BlogContactController.insertContact(request.getParameter("email"),request.getParameter("title"),request.getParameter("content"));
 
 
         }

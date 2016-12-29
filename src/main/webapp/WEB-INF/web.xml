@@ -77,6 +77,21 @@
         <url-pattern>/admin/blog/quiz/edit</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/auth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/newsletter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Admin</servlet-name>
         <url-pattern>/admin/blog/quiz/delete</url-pattern>
     </servlet-mapping>
@@ -88,6 +103,18 @@
     <servlet-mapping>
         <servlet-name>Blog</servlet-name>
         <url-pattern>/blog/article</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/article/vote</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/newsletter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Blog</servlet-name>
+        <url-pattern>/blog/contact</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Blog</servlet-name>

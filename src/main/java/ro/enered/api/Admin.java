@@ -32,6 +32,8 @@ public class Admin extends HttpServlet {
     private static final String RESULTDEL = "/admin/blog/result/delete";
     private static final String ANSWERDEL = "/admin/blog/answer/delete";
     private static final String LOGINADMIN = "/admin/auth";
+    private static final String CONTACT = "/admin/contact";
+    private static final String NEWSLETTER = "/admin/newsletter";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -148,6 +150,20 @@ public class Admin extends HttpServlet {
             } else {
                 response.getWriter().write("");
             }
+
+        }
+        if(path.equals(NEWSLETTER)){
+            String json = new Gson().toJson(BlogNewsletterController.getAll());
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(json);
+
+        }
+        if(path.equals(CONTACT)){
+            String json = new Gson().toJson(BlogContactController.getAll());
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(json);
 
         }
 
