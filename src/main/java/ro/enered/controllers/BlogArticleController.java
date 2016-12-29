@@ -134,7 +134,7 @@ public class BlogArticleController extends AbstractController {
 
     }
 
-    public static void addNew(String title, int categ, String poza, String continut, int id_u) {
+    public static void addNew(String title, int categ, String poza, String continut, int id_u, String pozasec) {
         PreparedStatement pst;
         try {
             pst = conn.prepareStatement("INSERT into blog_articles(category,title,publisher_id,featured_image,published_date,content,images,votes,title_en, title_de, title_fr, title_it, title_rus, title_es, title_pr, content_en, content_de, content_fr, content_it, content_rus, content_es, content_pr) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -145,7 +145,7 @@ public class BlogArticleController extends AbstractController {
             Date date = new Date();
             pst.setTimestamp(5, new Timestamp(date.getTime()));
             pst.setString(6, continut);
-            pst.setString(7, "");
+            pst.setString(7, pozasec);
             pst.setInt(8, 0);
             pst.setString(9," ");
             pst.setString(10," ");
@@ -168,16 +168,17 @@ public class BlogArticleController extends AbstractController {
         }
     }
 
-    public static void updateArt(String title, int categ, String poza, String continut, int id,int lang) {
+    public static void updateArt(String title, int categ, String poza, String continut, int id,int lang,String pozasec) {
         PreparedStatement pst;
         if(lang==1) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title=?,featured_image=?,content=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title=?,featured_image=?,content=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -185,12 +186,13 @@ public class BlogArticleController extends AbstractController {
         }
         if(lang==2) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_en=?,featured_image=?,content_en=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_en=?,featured_image=?,content_en=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -198,12 +200,13 @@ public class BlogArticleController extends AbstractController {
         }
         if(lang==3) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_de=?,featured_image=?,content_de=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_de=?,featured_image=?,content_de=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -211,12 +214,13 @@ public class BlogArticleController extends AbstractController {
         }
         if(lang==4) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_fr=?,featured_image=?,content_fr=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_fr=?,featured_image=?,content_fr=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -224,12 +228,13 @@ public class BlogArticleController extends AbstractController {
         }
         if(lang==5) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_it=?,featured_image=?,content_it=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_it=?,featured_image=?,content_it=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -237,12 +242,13 @@ public class BlogArticleController extends AbstractController {
         }
         if(lang==6) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category_rus=?,title=?,featured_image=?,content_rus=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category_rus=?,title=?,featured_image=?,content_rus=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -250,12 +256,14 @@ public class BlogArticleController extends AbstractController {
         }
         if(lang==7) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_es=?,featured_image=?,content_es=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category=?,title_es=?,featured_image=?,content_es=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
+
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -263,12 +271,13 @@ public class BlogArticleController extends AbstractController {
         }
         if(lang==8) {
             try {
-                pst = conn.prepareStatement("UPDATE blog_articles SET category_pr=?,title=?,featured_image=?,content_pr=? where id=?");
+                pst = conn.prepareStatement("UPDATE blog_articles SET category_pr=?,title=?,featured_image=?,content_pr=?,images=? where id=?");
                 pst.setInt(1, categ);
                 pst.setString(2, title);
                 pst.setString(3, poza);
                 pst.setString(4, continut);
                 pst.setInt(5, id);
+                pst.setString(6,pozasec);
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();

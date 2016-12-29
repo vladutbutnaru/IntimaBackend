@@ -107,9 +107,9 @@ public class Admin extends HttpServlet {
             BlogArticleController bac = new BlogArticleController();
             if (request.getParameter("id") != "") {
                 System.out.println(request.getParameter("lang"));
-                bac.updateArt(request.getParameter("title"), Integer.parseInt(request.getParameter("category")), request.getParameter("poza"), request.getParameter("continut"), Integer.parseInt(request.getParameter("id")),Integer.parseInt(request.getParameter("lang")));
+                bac.updateArt(request.getParameter("title"), Integer.parseInt(request.getParameter("category")), request.getParameter("poza"), request.getParameter("continut"), Integer.parseInt(request.getParameter("id")),Integer.parseInt(request.getParameter("lang")),request.getParameter("pozasec"));
             } else {
-                bac.addNew(request.getParameter("title"), Integer.parseInt(request.getParameter("category")), request.getParameter("poza"), request.getParameter("continut"), 1);
+                bac.addNew(request.getParameter("title"), Integer.parseInt(request.getParameter("category")), request.getParameter("poza"), request.getParameter("continut"), 1, request.getParameter("pozasec"));
             }
 
 
